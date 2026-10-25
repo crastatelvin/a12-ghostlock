@@ -1,0 +1,15 @@
+[82315] CAPS pid=4823 uid=2000 euid=2000 perm=0 slot0=0 V=ffffff8009ea09b2
+[82317] T tid=4825 nice19 ret=0 errno=0
+[82317] W tid=4826 lock-chain ret=0 errno=0
+[82318] O0 tid=4827 lock-target ret=0 errno=0
+[82470] SETUP chain w=1 o_t=1 t=1 o_c=1 w_w=1
+[82622] SETUP requeue ret=-1 errno=35
+[84470] W wait ret=-1 errno=110 (dangle expected)
+[84472] SETUP dangle ready w_wait_ret=-1 errno=110
+[84475] REQ[1] perm        A=ffffff800a18ea40 val=0000000000000000 slot=ffffff8009e78350 pc=ffffff800a18ea38 fp=ffffff8009e78350
+[84476] perm now=1
+[84480] REQ[2] reinit      A=ffffff8009e78438 val=ffffff800a18ea43 slot=ffffff8009e78370 pc=ffffff8009e78430 fp=ffffff8009e78370
+[84482] self context='u:r:shell:s0'
+[84484] after reinit perm=1 ctx=13
+[84487] BEACON pid=4993 try=0
+

@@ -1,0 +1,15 @@
+# Shell scripts and C sources must keep LF on checkout: they run on Android.
+* text=auto eol=lf
+
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+
+*.png  binary
+*.apk  binary
+*.zip  binary
+*.exe  binary
+*.dll  binary
+
+# ELF payloads
+payload/exploit binary
+payload/su      binary

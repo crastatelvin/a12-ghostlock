@@ -1,0 +1,9 @@
+[148531] CAPS pid=7588 uid=2000 euid=2000 perm=0 slot0=0 V=ffffff8009ea09b2
+[148534] W tid=7594 lock-chain ret=0 errno=0
+[148534] T tid=7593 nice19 ret=0 errno=0
+[148537] O0 tid=7595 lock-target ret=0 errno=0
+[148689] SETUP chain w=1 o_t=1 t=1 o_c=1 w_w=1
+[148841] SETUP requeue ret=-1 errno=35
+[150689] W wait ret=-1 errno=110 (dangle expected)
+[150690] SETUP dangle ready w_wait_ret=-1 errno=110
+

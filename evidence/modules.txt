@@ -1,0 +1,17 @@
+[
+  {
+    "id": "a12mod_test",
+    "name": "A12 Module Test",
+    "version": "v1.0",
+    "versionCode": "1",
+    "author": "A12",
+    "description": "Overlay + script test module",
+    "enabled": "true",
+    "update": "false",
+    "remove": "false",
+    "web": "false",
+    "action": "true",
+    "mount": "true"
+  }
+]
+

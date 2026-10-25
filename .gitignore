@@ -1,0 +1,16 @@
+# Build output / local scratch
+*.o
+*.obj
+bin/
+obj/
+ndk/
+work/
+testmod/
+
+# Third-party APKs ship in the release archive, not in the repo
+payload/apps/*.apk
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

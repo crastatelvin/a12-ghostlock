@@ -1,0 +1,198 @@
+[2022-08-05 09:42:40] su stack repaired
+[2022-08-05 09:42:40] mount pass done: 0 targets
+[2022-08-05 09:42:40] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:42:40] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:42:42] disabled a12mod_test
+[2022-08-05 09:42:43] su stack repaired
+[2022-08-05 09:42:43] mount pass done: 0 targets
+[2022-08-05 09:42:43] enabled a12mod_test
+[2022-08-05 09:42:44] su stack repaired
+[2022-08-05 09:42:44] mount pass done: 0 targets
+[2022-08-05 09:43:00] su stack repaired
+[2022-08-05 09:43:00] mount pass done: 0 targets
+[2022-08-05 09:43:49] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:43:49] mounted /system/etc
+[2022-08-05 09:43:50] su stack repaired
+[2022-08-05 09:43:50] mount pass done: 1 targets
+[2022-08-05 09:43:50] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:43:50] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:43:57] unmounted /system/etc
+[2022-08-05 09:43:58] mounted /system/etc
+[2022-08-05 09:43:58] su stack repaired
+[2022-08-05 09:43:58] mount pass done: 1 targets
+[2022-08-05 09:44:04] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:44:04] unmounted /system/etc
+[2022-08-05 09:44:05] mounted /system/etc
+[2022-08-05 09:44:05] su stack repaired
+[2022-08-05 09:44:05] mount pass done: 1 targets
+[2022-08-05 09:44:05] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:44:05] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:44:08] disabled a12mod_test
+[2022-08-05 09:44:08] unmounted /system/etc
+[2022-08-05 09:44:08] su stack repaired
+[2022-08-05 09:44:08] mount pass done: 0 targets
+[2022-08-05 09:44:09] enabled a12mod_test
+[2022-08-05 09:44:09] mounted /system/etc
+[2022-08-05 09:44:09] su stack repaired
+[2022-08-05 09:44:09] mount pass done: 1 targets
+[2022-08-05 09:44:27] uninstalled a12mod_test
+[2022-08-05 09:44:28] unmounted /system/etc
+[2022-08-05 09:44:28] su stack repaired
+[2022-08-05 09:44:28] mount pass done: 0 targets
+[2022-08-05 09:45:34] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:45:34] mounted /system/etc
+[2022-08-05 09:45:35] su stack repaired
+[2022-08-05 09:45:35] mount pass done: 1 targets
+[2022-08-05 09:45:35] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:45:35] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:49:16] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:49:16] unmounted /system/etc
+[2022-08-05 09:49:17] mounted /system/etc
+[2022-08-05 09:49:17] su stack repaired
+[2022-08-05 09:49:17] mount pass done: 1 targets
+[2022-08-05 09:49:17] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:49:17] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:51:23] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:51:23] mounted /system/etc
+[2022-08-05 09:51:23] su stack repaired
+[2022-08-05 09:51:23] mount pass done: 1 targets
+[2022-08-05 09:51:23] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:51:56] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:51:56] unmounted /system/etc
+[2022-08-05 09:51:56] mounted /system/etc
+[2022-08-05 09:51:56] su stack repaired
+[2022-08-05 09:51:57] mount pass done: 1 targets
+[2022-08-05 09:51:57] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:51:57] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 09:56:36] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:56:36] mounted /system/etc
+[2022-08-05 09:56:36] su stack repaired
+[2022-08-05 09:56:36] mount pass done: 1 targets
+[2022-08-05 09:56:37] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:57:09] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 09:57:09] unmounted /system/etc
+[2022-08-05 09:57:09] mounted /system/etc
+[2022-08-05 09:57:09] su stack repaired
+[2022-08-05 09:57:09] mount pass done: 1 targets
+[2022-08-05 09:57:09] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 09:57:09] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 10:04:38] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:04:38] mounted /system/etc
+[2022-08-05 10:04:38] su stack repaired
+[2022-08-05 10:04:38] mount pass done: 1 targets
+[2022-08-05 10:04:38] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:05:11] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:05:11] unmounted /system/etc
+[2022-08-05 10:05:11] mounted /system/etc
+[2022-08-05 10:05:11] su stack repaired
+[2022-08-05 10:05:12] mount pass done: 1 targets
+[2022-08-05 10:05:12] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:05:12] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 10:10:53] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:10:53] mounted /system/etc
+[2022-08-05 10:10:53] su stack repaired
+[2022-08-05 10:10:54] mount pass done: 1 targets
+[2022-08-05 10:10:54] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:11:26] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:11:26] unmounted /system/etc
+[2022-08-05 10:11:26] mounted /system/etc
+[2022-08-05 10:11:27] su stack repaired
+[2022-08-05 10:11:27] mount pass done: 1 targets
+[2022-08-05 10:11:27] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:11:27] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 10:20:23] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:20:23] mounted /system/etc
+[2022-08-05 10:20:23] su stack repaired
+[2022-08-05 10:20:23] mount pass done: 1 targets
+[2022-08-05 10:20:23] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:20:55] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:20:56] unmounted /system/etc
+[2022-08-05 10:20:56] mounted /system/etc
+[2022-08-05 10:20:56] su stack repaired
+[2022-08-05 10:20:56] mount pass done: 1 targets
+[2022-08-05 10:20:56] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:20:56] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 10:25:35] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:25:35] mounted /system/etc
+[2022-08-05 10:25:35] su stack repaired
+[2022-08-05 10:25:35] mount pass done: 1 targets
+[2022-08-05 10:25:35] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:26:09] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:26:09] unmounted /system/etc
+[2022-08-05 10:26:09] mounted /system/etc
+[2022-08-05 10:26:09] su stack repaired
+[2022-08-05 10:26:09] mount pass done: 1 targets
+[2022-08-05 10:26:09] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:26:09] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2022-08-05 10:30:49] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:30:49] mounted /system/etc
+[2022-08-05 10:30:49] su stack repaired
+[2022-08-05 10:30:49] mount pass done: 1 targets
+[2022-08-05 10:30:49] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:31:22] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2022-08-05 10:31:22] unmounted /system/etc
+[2022-08-05 10:31:22] mounted /system/etc
+[2022-08-05 10:31:22] su stack repaired
+[2022-08-05 10:31:23] mount pass done: 1 targets
+[2022-08-05 10:31:23] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2022-08-05 10:31:23] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2026-10-25 17:34:40] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:34:40] mounted /system/etc
+[2026-10-25 17:34:41] su stack repaired
+[2026-10-25 17:34:41] mount pass done: 1 targets
+[2026-10-25 17:34:41] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:35:13] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:35:13] unmounted /system/etc
+[2026-10-25 17:35:13] mounted /system/etc
+[2026-10-25 17:35:14] su stack repaired
+[2026-10-25 17:35:14] mount pass done: 1 targets
+[2026-10-25 17:35:14] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:35:14] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2026-10-25 17:40:56] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:40:56] mounted /system/etc
+[2026-10-25 17:40:56] su stack repaired
+[2026-10-25 17:40:56] mount pass done: 1 targets
+[2026-10-25 17:40:56] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:41:29] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:41:29] unmounted /system/etc
+[2026-10-25 17:41:29] mounted /system/etc
+[2026-10-25 17:41:29] su stack repaired
+[2026-10-25 17:41:29] mount pass done: 1 targets
+[2026-10-25 17:41:29] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:41:29] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2026-10-25 17:51:50] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:51:50] mounted /system/etc
+[2026-10-25 17:51:50] su stack repaired
+[2026-10-25 17:51:50] mount pass done: 1 targets
+[2026-10-25 17:51:50] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:52:23] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 17:52:23] unmounted /system/etc
+[2026-10-25 17:52:23] mounted /system/etc
+[2026-10-25 17:52:23] su stack repaired
+[2026-10-25 17:52:23] mount pass done: 1 targets
+[2026-10-25 17:52:23] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 17:52:24] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2026-10-25 18:02:03] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 18:02:04] mounted /system/etc
+[2026-10-25 18:02:04] su stack repaired
+[2026-10-25 18:02:04] mount pass done: 1 targets
+[2026-10-25 18:02:04] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 18:02:36] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 18:02:37] unmounted /system/etc
+[2026-10-25 18:02:37] mounted /system/etc
+[2026-10-25 18:02:37] su stack repaired
+[2026-10-25 18:02:37] mount pass done: 1 targets
+[2026-10-25 18:02:37] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 18:02:37] installed a12mod_test from /data/local/tmp/a12mod_test.zip
+[2026-10-25 18:09:28] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 18:09:28] mounted /system/etc
+[2026-10-25 18:09:28] su stack repaired
+[2026-10-25 18:09:28] mount pass done: 1 targets
+[2026-10-25 18:09:28] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 18:10:01] script(fg) /data/adb/modules/a12mod_test/post-fs-data.sh rc=0
+[2026-10-25 18:10:01] unmounted /system/etc
+[2026-10-25 18:10:01] mounted /system/etc
+[2026-10-25 18:10:01] su stack repaired
+[2026-10-25 18:10:01] mount pass done: 1 targets
+[2026-10-25 18:10:01] script(bg) /data/adb/modules/a12mod_test/service.sh
+[2026-10-25 18:10:02] installed a12mod_test from /data/local/tmp/a12mod_test.zip

@@ -1,0 +1,1805 @@
+[82249] CAPS pid=4842 uid=2000 euid=2000 perm=0 slot0=0 V=ffffff8009ea09b2
+[82251] T tid=4843 nice19 ret=0 errno=0
+[82251] W tid=4844 lock-chain ret=0 errno=0
+[82252] O0 tid=4845 lock-target ret=0 errno=0
+[82404] SETUP chain w=1 o_t=1 t=1 o_c=1 w_w=1
+[82564] SETUP requeue ret=-1 errno=35
+[84404] W wait ret=-1 errno=110 (dangle expected)
+[84410] SETUP dangle ready w_wait_ret=-1 errno=110
+[84418] REQ[1] perm        A=ffffff800a18ea40 val=0000000000000000 slot=ffffff8009e78350 pc=ffffff800a18ea38 fp=ffffff8009e78350
+[84420] perm now=1
+[84424] REQ[2] reinit      A=ffffff8009e78438 val=ffffff800a18ea43 slot=ffffff8009e78370 pc=ffffff8009e78430 fp=ffffff8009e78370
+[84425] self context='u:r:shell:s0'
+[84427] after reinit perm=1 ctx=13
+[84428] BEACON pid=5008 try=0
+[84431] REQ[3] c-tail      A=ffffff8009e88328 val=ffffff8009e6bce0 slot=ffffff8009e78390 pc=ffffff8009e88320 fp=ffffff8009e78390
+[84434] REQ[4] c-cand      A=ffffff8009e88328 val=ffffffc12fd6cfc8 slot=ffffff8009e783b0 pc=ffffff8009e88320 fp=ffffff8009e783b0
+[84436] CAND n=32 hex=2083e80980ffffff80ed2751c1ffffff80ed2751c1ffffff613132726f6f740a
+[84437] CAND try=0 cred=ffffffc15127ed80 comm='a12root' n=32
+[84438] MATCH beacon cred=ffffffc15127ed80
+[84441] REQ[5] cred_secbits A=ffffffc15127eda0 val=0000000000000000 slot=ffffff8009e783d0 pc=ffffffc15127ed98 fp=ffffff8009e783d0
+[84443] REQ[6] cred_prm    A=ffffffc15127edb0 val=ffffff8009ea09b2 slot=ffffff8009e783f0 pc=ffffffc15127eda8 fp=ffffff8009e783f0
+[84446] REQ[7] cred_eff    A=ffffffc15127edb8 val=ffffff8009ea09b2 slot=ffffff8009e78410 pc=ffffffc15127edb0 fp=ffffff8009e78410
+[84449] REQ[8] cred_bset   A=ffffffc15127edc0 val=ffffff8009ea09b2 slot=ffffff8009e77e70 pc=ffffffc15127edb8 fp=ffffff8009e77e70
+[84450] PARENT wrote beacon caps; signalling
+[84451] PARENT parked
+[84451] BEACON work start uid=2000 euid=2000
+[84452] PRE2 Uid:	2000	2000	2000	2000 | Gid:	2000	2000	2000	0 | CapPrm:	ffffff8009ea09b2 | CapEff:	ffffff8009ea09b2 | CapBnd:	ffffff8009ea09b2 | NoNewPrivs:	0
+[84453] SETRESUID ret=0 errno=0 uid=0 euid=0
+[84455] CAPS Uid:	0	0	0	0 | Gid:	2000	2000	2000	0 | CapPrm:	ffffff8009ea09b2 | CapEff:	ffffff8009ea09b2 | CapBnd:	ffffff8009ea09b2 | NoNewPrivs:	0
+[84456] DAC[0] /data/system/users/0.xml OK read=16
+[84459] DAC[1] /data/log/vold-dump_14 OK read=16
+[84460] DAC[2] /data/system/packages.xml OK read=16
+[84462] ROOTPROOF written
+[84463] ROOTKID pid=5015
+[84465] SU tmpfs mounted on /system_ext/bin
+[84474] KSU stack installed 4/4 tools
+[84477] SU legacy /data/local/su
+[84478] SU legacy /data/local/bin/su
+[84480] SU legacy /data/local/xbin/su
+[84481] SU installed /system_ext/bin/su size=13576
+[84494] SU listening on /dev/socket/a12su
+[84709] SU req uid=2000 target=0 cmd='id; id -u'
+[84710] SU decision uid=2000 allow=1
+[84770] SU done uid=2000 code=0
+[84795] SU selftest uid2000 status=0
+[84815] SU req uid=2000 target=0 cmd='(persistent shell)'
+[84816] SU decision uid=2000 allow=1
+[84819] SU shellcmd uid=2000 'echo SHELL_TEST|id -u|'
+[84955] SU done uid=2000 code=0
+[84956] SU shell test OK status=0 out='SHELL_TEST
+0
+'
+[84958] ROOTD READY uid=0 euid=0
+[84959] KSU late-load pid=5066
+[85085] IDCHILD status=0
+[85087] CAPS done uid=0 euid=0 (parked)
+[86586] SU req uid=2000 target=0 cmd='id'
+[86588] SU decision uid=2000 allow=1
+[86627] SU done uid=2000 code=0
+[89143] SU req uid=10259 target=0 cmd='(persistent shell)'
+[116815] SU req uid=2000 target=0 cmd='su -v; su -V; ksud --version; magisk -v; magisk -V'
+[116817] SU decision uid=2000 allow=1
+[116953] SU done uid=2000 code=0
+[117020] SU req uid=2000 target=2000 cmd='id -u'
+[117022] SU decision uid=2000 allow=1
+[117059] SU done uid=2000 code=0
+[117126] SU req uid=2000 target=0 cmd='resetprop debug.a12oneclick hello; getprop debug.a12oneclick'
+[117128] SU decision uid=2000 allow=1
+[117199] SU done uid=2000 code=0
+[117266] SU req uid=2000 target=0 cmd='ksud module install /data/local/tmp/a12mod_test.zip'
+[117268] SU decision uid=2000 allow=1
+[119194] SU done uid=2000 code=0
+[119263] SU req uid=2000 target=0 cmd='ksud module list'
+[119265] SU decision uid=2000 allow=1
+[119276] SU prompt uid=10259 ans='' allow=0
+[119278] SU decision uid=10259 allow=0
+[119337] SU req uid=10259 target=0 cmd='(persistent shell)'
+[119916] SU done uid=2000 code=0
+[141887] SU req uid=10259 target=0 cmd='(persistent shell)'
+[149490] SU prompt uid=10259 ans='' allow=0
+[149492] SU decision uid=10259 allow=0
+[156799] SU prompt uid=10259 ans='always' allow=1
+[156801] SU decision uid=10259 allow=1
+[156805] SU shellcmd uid=10259 'echo SHELL_TEST|'
+[156822] SU shellcmd uid=10259 'id|'
+[156848] SU shellcmd uid=10259 'cd '/'|'
+[156852] SU shellcmd uid=10259 '|'
+[156854] SU shellcmd uid=10259 'su -c 'nsenter --mount=/proc/1/ns/mnt sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b4'
+[156872] SU req uid=0 target=0 cmd='(persistent shell)'
+[156875] SU decision uid=0 allow=1
+[156877] SU shellcmd uid=0 '__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset __RET|'
+[156898] SU shellcmd uid=10259 '|'
+[156901] SU shellcmd uid=10259 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[156901] SU shellcmd uid=0 '|'
+[156905] SU shellcmd uid=0 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[157066] SU shellcmd uid=10259 '|'
+[157070] SU shellcmd uid=10259 'uname -r -m -o|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset '
+[157070] SU shellcmd uid=0 '|'
+[157071] SU shellcmd uid=0 'uname -r -m -o|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset '
+[157095] SU shellcmd uid=10259 '|pm install --bypass-low-target-sdk-block not-existing.apk 2>&1 | grep not-existing.apk|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1'
+[157097] SU shellcmd uid=0 '|pm install --bypass-low-target-sdk-block not-existing.apk 2>&1 | grep not-existing.apk|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1'
+[157143] SU shellcmd uid=10259 '|'
+[157145] SU shellcmd uid=10259 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[157145] SU shellcmd uid=0 '|'
+[157146] SU shellcmd uid=0 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[157300] SU shellcmd uid=10259 '|'
+[157308] SU shellcmd uid=10259 '/data/local/toybox --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo'
+[157308] SU shellcmd uid=0 '|'
+[157309] SU shellcmd uid=0 '/data/local/toybox --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo'
+[157315] SU shellcmd uid=10259 '|'
+[157317] SU shellcmd uid=10259 '/data/local/toybox|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;un'
+[157317] SU shellcmd uid=0 '|'
+[157319] SU shellcmd uid=0 '/data/local/toybox|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;un'
+[157327] SU shellcmd uid=10259 '|'
+[157329] SU shellcmd uid=0 '|'
+[157329] SU shellcmd uid=10259 'toybox-ext --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;'
+[157331] SU shellcmd uid=0 'toybox-ext --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;'
+[157337] SU shellcmd uid=10259 '|'
+[157339] SU shellcmd uid=0 '|'
+[157339] SU shellcmd uid=10259 'toybox-ext|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset __RE'
+[157339] SU shellcmd uid=0 'toybox-ext|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset __RE'
+[157346] SU shellcmd uid=10259 '|'
+[157348] SU shellcmd uid=0 '|'
+[157348] SU shellcmd uid=10259 'toybox_vendor --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__R'
+[157350] SU shellcmd uid=0 'toybox_vendor --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__R'
+[157381] SU shellcmd uid=10259 '|'
+[157383] SU shellcmd uid=0 '|'
+[157383] SU shellcmd uid=10259 '"toybox_vendor" ls -ld /|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__'
+[157384] SU shellcmd uid=0 '"toybox_vendor" ls -ld /|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__'
+[157415] SU shellcmd uid=10259 '|'
+[157417] SU shellcmd uid=0 '|'
+[157417] SU shellcmd uid=10259 'toybox-stock --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RE'
+[157418] SU shellcmd uid=0 'toybox-stock --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RE'
+[157425] SU shellcmd uid=10259 '|'
+[157426] SU shellcmd uid=0 '|'
+[157426] SU shellcmd uid=10259 'toybox-stock|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset __'
+[157427] SU shellcmd uid=0 'toybox-stock|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unset __'
+[157435] SU shellcmd uid=10259 '|'
+[157437] SU shellcmd uid=0 '|'
+[157437] SU shellcmd uid=10259 'toybox --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unse'
+[157438] SU shellcmd uid=0 'toybox --version|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;unse'
+[157464] SU shellcmd uid=10259 '|'
+[157466] SU shellcmd uid=0 '|'
+[157467] SU shellcmd uid=10259 '"toybox" ls -ld /|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;uns'
+[157467] SU shellcmd uid=0 '"toybox" ls -ld /|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;uns'
+[157701] SU shellcmd uid=10259 '|'
+[157703] SU shellcmd uid=0 '|'
+[157703] SU shellcmd uid=10259 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[157704] SU shellcmd uid=0 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+[219719] SU req uid=10257 target=0 cmd='(persistent shell)'
+[227226] SU prompt uid=10257 ans='always' allow=1
+[227230] SU decision uid=10257 allow=1
+[227233] SU shellcmd uid=10257 'echo SHELL_TEST|'
+[227258] SU shellcmd uid=10257 'id|'
+[227286] SU shellcmd uid=10257 'cd '/'|'
+[227361] SU shellcmd uid=10257 '|'
+[227363] SU shellcmd uid=10257 '(CLASSPATH=/storage/emulated/0/Android/data/io.github.muntashirakon.AppManager/cache/main.jar  /system/bin/app_process64  -Xnoimag'
+[234050] SU shellcmd uid=10257 '|'
+[234053] SU shellcmd uid=10257 'su 1073 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[234074] SU req uid=0 target=1073 cmd='keystore_cli_v2 list'
+[234077] SU decision uid=0 allow=1
+[234149] SU done uid=0 code=0
+[234186] SU shellcmd uid=10257 '|'
+[234189] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[234208] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[234211] SU decision uid=0 allow=1
+[234268] SU done uid=0 code=0
+[234291] SU shellcmd uid=10257 '|'
+[234294] SU shellcmd uid=10257 'su 10156 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[234311] SU req uid=0 target=10156 cmd='keystore_cli_v2 list'
+[234313] SU decision uid=0 allow=1
+[234372] SU done uid=0 code=0
+[234398] SU shellcmd uid=10257 '|'
+[234401] SU shellcmd uid=10257 'su 10220 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[234417] SU req uid=0 target=10220 cmd='keystore_cli_v2 list'
+[234419] SU decision uid=0 allow=1
+[234474] SU done uid=0 code=0
+[234509] SU shellcmd uid=10257 '|'
+[234512] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[234528] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[234530] SU decision uid=0 allow=1
+[234585] SU done uid=0 code=0
+[234608] SU shellcmd uid=10257 '|'
+[234611] SU shellcmd uid=10257 'su 10066 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[234630] SU req uid=0 target=10066 cmd='keystore_cli_v2 list'
+[234632] SU decision uid=0 allow=1
+[234686] SU done uid=0 code=0
+[234708] SU shellcmd uid=10257 '|'
+[234711] SU shellcmd uid=10257 'su 10118 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[234729] SU req uid=0 target=10118 cmd='keystore_cli_v2 list'
+[234731] SU decision uid=0 allow=1
+[234786] SU done uid=0 code=0
+[234837] SU shellcmd uid=10257 '|'
+[234839] SU shellcmd uid=10257 'su 10080 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[234857] SU req uid=0 target=10080 cmd='keystore_cli_v2 list'
+[234859] SU decision uid=0 allow=1
+[234912] SU done uid=0 code=0
+[234959] SU shellcmd uid=10257 '|'
+[234961] SU shellcmd uid=10257 'su 5013 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[234978] SU req uid=0 target=5013 cmd='keystore_cli_v2 list'
+[234980] SU decision uid=0 allow=1
+[235032] SU done uid=0 code=0
+[235055] SU shellcmd uid=10257 '|'
+[235057] SU shellcmd uid=10257 'su 10042 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235074] SU req uid=0 target=10042 cmd='keystore_cli_v2 list'
+[235076] SU decision uid=0 allow=1
+[235130] SU done uid=0 code=0
+[235154] SU shellcmd uid=10257 '|'
+[235156] SU shellcmd uid=10257 'su 10137 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235174] SU req uid=0 target=10137 cmd='keystore_cli_v2 list'
+[235176] SU decision uid=0 allow=1
+[235231] SU done uid=0 code=0
+[235255] SU shellcmd uid=10257 '|'
+[235257] SU shellcmd uid=10257 'su 10061 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235274] SU req uid=0 target=10061 cmd='keystore_cli_v2 list'
+[235276] SU decision uid=0 allow=1
+[235330] SU done uid=0 code=0
+[235353] SU shellcmd uid=10257 '|'
+[235355] SU shellcmd uid=10257 'su 10000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235373] SU req uid=0 target=10000 cmd='keystore_cli_v2 list'
+[235375] SU decision uid=0 allow=1
+[235430] SU done uid=0 code=0
+[235469] SU shellcmd uid=10257 '|'
+[235471] SU shellcmd uid=10257 'su 10222 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235489] SU req uid=0 target=10222 cmd='keystore_cli_v2 list'
+[235493] SU decision uid=0 allow=1
+[235553] SU done uid=0 code=0
+[235576] SU shellcmd uid=10257 '|'
+[235579] SU shellcmd uid=10257 'su 10007 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235600] SU req uid=0 target=10007 cmd='keystore_cli_v2 list'
+[235603] SU decision uid=0 allow=1
+[235670] SU done uid=0 code=0
+[235698] SU shellcmd uid=10257 '|'
+[235700] SU shellcmd uid=10257 'su 10129 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235719] SU req uid=0 target=10129 cmd='keystore_cli_v2 list'
+[235722] SU decision uid=0 allow=1
+[235783] SU done uid=0 code=0
+[235824] SU shellcmd uid=10257 '|'
+[235826] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[235846] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[235849] SU decision uid=0 allow=1
+[235911] SU done uid=0 code=0
+[235939] SU shellcmd uid=10257 '|'
+[235941] SU shellcmd uid=10257 'su 10153 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[235960] SU req uid=0 target=10153 cmd='keystore_cli_v2 list'
+[235962] SU decision uid=0 allow=1
+[236022] SU done uid=0 code=0
+[236067] SU shellcmd uid=10257 '|'
+[236070] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[236089] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[236091] SU decision uid=0 allow=1
+[236151] SU done uid=0 code=0
+[236189] SU shellcmd uid=10257 '|'
+[236190] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[236206] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[236208] SU decision uid=0 allow=1
+[236265] SU done uid=0 code=0
+[236290] SU shellcmd uid=10257 '|'
+[236293] SU shellcmd uid=10257 'su 10245 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[236309] SU req uid=0 target=10245 cmd='keystore_cli_v2 list'
+[236311] SU decision uid=0 allow=1
+[236364] SU done uid=0 code=0
+[236389] SU shellcmd uid=10257 '|'
+[236391] SU shellcmd uid=10257 'su 10190 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[236412] SU req uid=0 target=10190 cmd='keystore_cli_v2 list'
+[236414] SU decision uid=0 allow=1
+[236470] SU done uid=0 code=0
+[236565] SU shellcmd uid=10257 '|'
+[236567] SU shellcmd uid=10257 'su 10151 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[236587] SU req uid=0 target=10151 cmd='keystore_cli_v2 list'
+[236589] SU decision uid=0 allow=1
+[236643] SU done uid=0 code=0
+[236682] SU shellcmd uid=10257 '|'
+[236683] SU shellcmd uid=10257 'su 1073 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[236703] SU req uid=0 target=1073 cmd='keystore_cli_v2 list'
+[236705] SU decision uid=0 allow=1
+[236768] SU done uid=0 code=0
+[236812] SU shellcmd uid=10257 '|su 10104 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&'
+[236833] SU req uid=0 target=10104 cmd='keystore_cli_v2 list'
+[236835] SU decision uid=0 allow=1
+[236903] SU done uid=0 code=0
+[236968] SU shellcmd uid=10257 '|su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[236985] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[236988] SU decision uid=0 allow=1
+[237043] SU done uid=0 code=0
+[237077] SU shellcmd uid=10257 '|'
+[237080] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[237097] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[237099] SU decision uid=0 allow=1
+[237153] SU done uid=0 code=0
+[237184] SU shellcmd uid=10257 '|'
+[237186] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237205] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[237207] SU decision uid=0 allow=1
+[237268] SU done uid=0 code=0
+[237294] SU shellcmd uid=10257 '|'
+[237297] SU shellcmd uid=10257 'su 10186 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237315] SU req uid=0 target=10186 cmd='keystore_cli_v2 list'
+[237318] SU decision uid=0 allow=1
+[237372] SU done uid=0 code=0
+[237394] SU shellcmd uid=10257 '|'
+[237396] SU shellcmd uid=10257 'su 10174 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237413] SU req uid=0 target=10174 cmd='keystore_cli_v2 list'
+[237417] SU decision uid=0 allow=1
+[237474] SU done uid=0 code=0
+[237495] SU shellcmd uid=10257 '|'
+[237498] SU shellcmd uid=10257 'su 10005 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237518] SU req uid=0 target=10005 cmd='keystore_cli_v2 list'
+[237520] SU decision uid=0 allow=1
+[237575] SU done uid=0 code=0
+[237597] SU shellcmd uid=10257 '|'
+[237600] SU shellcmd uid=10257 'su 10211 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237617] SU req uid=0 target=10211 cmd='keystore_cli_v2 list'
+[237619] SU decision uid=0 allow=1
+[237673] SU done uid=0 code=0
+[237694] SU shellcmd uid=10257 '|'
+[237696] SU shellcmd uid=10257 'su 10070 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237712] SU req uid=0 target=10070 cmd='keystore_cli_v2 list'
+[237715] SU decision uid=0 allow=1
+[237768] SU done uid=0 code=0
+[237789] SU shellcmd uid=10257 '|'
+[237792] SU shellcmd uid=10257 'su 10030 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237808] SU req uid=0 target=10030 cmd='keystore_cli_v2 list'
+[237810] SU decision uid=0 allow=1
+[237864] SU done uid=0 code=0
+[237917] SU shellcmd uid=10257 '|'
+[237919] SU shellcmd uid=10257 'su 10029 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[237939] SU req uid=0 target=10029 cmd='keystore_cli_v2 list'
+[237942] SU decision uid=0 allow=1
+[237997] SU done uid=0 code=0
+[238031] SU shellcmd uid=10257 '|'
+[238034] SU shellcmd uid=10257 'su 5003 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[238053] SU req uid=0 target=5003 cmd='keystore_cli_v2 list'
+[238055] SU decision uid=0 allow=1
+[238113] SU done uid=0 code=0
+[238148] SU shellcmd uid=10257 '|'
+[238150] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[238168] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[238171] SU decision uid=0 allow=1
+[238228] SU done uid=0 code=0
+[238261] SU shellcmd uid=10257 '|'
+[238264] SU shellcmd uid=10257 'su 5250 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[238284] SU req uid=0 target=5250 cmd='keystore_cli_v2 list'
+[238286] SU decision uid=0 allow=1
+[238343] SU done uid=0 code=0
+[238372] SU shellcmd uid=10257 '|'
+[238375] SU shellcmd uid=10257 'su 10141 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[238393] SU req uid=0 target=10141 cmd='keystore_cli_v2 list'
+[238396] SU decision uid=0 allow=1
+[238462] SU done uid=0 code=0
+[238502] SU shellcmd uid=10257 '|'
+[238505] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[238521] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[238524] SU decision uid=0 allow=1
+[238586] SU done uid=0 code=0
+[238610] SU shellcmd uid=10257 '|'
+[238613] SU shellcmd uid=10257 'su 10002 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[238633] SU req uid=0 target=10002 cmd='keystore_cli_v2 list'
+[238636] SU decision uid=0 allow=1
+[238695] SU done uid=0 code=0
+[238731] SU shellcmd uid=10257 '|'
+[238733] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[238751] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[238753] SU decision uid=0 allow=1
+[238814] SU done uid=0 code=0
+[238837] SU shellcmd uid=10257 '|'
+[238839] SU shellcmd uid=10257 'su 10084 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[238856] SU req uid=0 target=10084 cmd='keystore_cli_v2 list'
+[238858] SU decision uid=0 allow=1
+[238911] SU done uid=0 code=0
+[238933] SU shellcmd uid=10257 '|'
+[238936] SU shellcmd uid=10257 'su 10059 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[238955] SU req uid=0 target=10059 cmd='keystore_cli_v2 list'
+[238957] SU decision uid=0 allow=1
+[239014] SU done uid=0 code=0
+[239037] SU shellcmd uid=10257 '|'
+[239039] SU shellcmd uid=10257 'su 10138 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239055] SU req uid=0 target=10138 cmd='keystore_cli_v2 list'
+[239058] SU decision uid=0 allow=1
+[239113] SU done uid=0 code=0
+[239137] SU shellcmd uid=10257 '|'
+[239139] SU shellcmd uid=10257 'su 10122 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239156] SU req uid=0 target=10122 cmd='keystore_cli_v2 list'
+[239158] SU decision uid=0 allow=1
+[239212] SU done uid=0 code=0
+[239243] SU shellcmd uid=10257 '|'
+[239245] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[239262] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[239264] SU decision uid=0 allow=1
+[239320] SU done uid=0 code=0
+[239340] SU shellcmd uid=10257 '|'
+[239343] SU shellcmd uid=10257 'su 10168 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239359] SU req uid=0 target=10168 cmd='keystore_cli_v2 list'
+[239361] SU decision uid=0 allow=1
+[239415] SU done uid=0 code=0
+[239437] SU shellcmd uid=10257 '|'
+[239439] SU shellcmd uid=10257 'su 10167 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239456] SU req uid=0 target=10167 cmd='keystore_cli_v2 list'
+[239458] SU decision uid=0 allow=1
+[239511] SU done uid=0 code=0
+[239542] SU shellcmd uid=10257 '|'
+[239544] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[239560] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[239562] SU decision uid=0 allow=1
+[239618] SU done uid=0 code=0
+[239653] SU shellcmd uid=10257 '|'
+[239655] SU shellcmd uid=10257 'su 5010 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[239673] SU req uid=0 target=5010 cmd='keystore_cli_v2 list'
+[239675] SU decision uid=0 allow=1
+[239730] SU done uid=0 code=0
+[239760] SU shellcmd uid=10257 '|'
+[239763] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239780] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[239782] SU decision uid=0 allow=1
+[239835] SU done uid=0 code=0
+[239855] SU shellcmd uid=10257 '|'
+[239858] SU shellcmd uid=10257 'su 10126 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239874] SU req uid=0 target=10126 cmd='keystore_cli_v2 list'
+[239876] SU decision uid=0 allow=1
+[239929] SU done uid=0 code=0
+[239950] SU shellcmd uid=10257 '|'
+[239952] SU shellcmd uid=10257 'su 10036 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[239969] SU req uid=0 target=10036 cmd='keystore_cli_v2 list'
+[239972] SU decision uid=0 allow=1
+[240041] SU done uid=0 code=0
+[240087] SU shellcmd uid=10257 '|'
+[240089] SU shellcmd uid=10257 'su 10065 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240118] SU req uid=0 target=10065 cmd='keystore_cli_v2 list'
+[240121] SU decision uid=0 allow=1
+[240179] SU done uid=0 code=0
+[240208] SU shellcmd uid=10257 '|'
+[240211] SU shellcmd uid=10257 'su 10017 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240229] SU req uid=0 target=10017 cmd='keystore_cli_v2 list'
+[240232] SU decision uid=0 allow=1
+[240296] SU done uid=0 code=0
+[240321] SU shellcmd uid=10257 '|'
+[240323] SU shellcmd uid=10257 'su 10073 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240343] SU req uid=0 target=10073 cmd='keystore_cli_v2 list'
+[240345] SU decision uid=0 allow=1
+[240407] SU done uid=0 code=0
+[240434] SU shellcmd uid=10257 '|'
+[240436] SU shellcmd uid=10257 'su 10259 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240455] SU req uid=0 target=10259 cmd='keystore_cli_v2 list'
+[240457] SU decision uid=0 allow=1
+[240516] SU done uid=0 code=0
+[240545] SU shellcmd uid=10257 '|'
+[240547] SU shellcmd uid=10257 'su 10033 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240563] SU req uid=0 target=10033 cmd='keystore_cli_v2 list'
+[240567] SU decision uid=0 allow=1
+[240624] SU done uid=0 code=0
+[240660] SU shellcmd uid=10257 '|su 5004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240679] SU req uid=0 target=5004 cmd='keystore_cli_v2 list'
+[240681] SU decision uid=0 allow=1
+[240742] SU done uid=0 code=0
+[240764] SU shellcmd uid=10257 '|'
+[240766] SU shellcmd uid=10257 'su 10161 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[240782] SU req uid=0 target=10161 cmd='keystore_cli_v2 list'
+[240784] SU decision uid=0 allow=1
+[240838] SU done uid=0 code=0
+[240953] SU shellcmd uid=10257 '|'
+[240956] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[240973] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[240976] SU decision uid=0 allow=1
+[241035] SU done uid=0 code=0
+[241060] SU shellcmd uid=10257 '|'
+[241062] SU shellcmd uid=10257 'su 10246 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[241079] SU req uid=0 target=10246 cmd='keystore_cli_v2 list'
+[241084] SU decision uid=0 allow=1
+[241141] SU done uid=0 code=0
+[241201] SU shellcmd uid=10257 '|'
+[241204] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[241223] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[241225] SU decision uid=0 allow=1
+[241280] SU done uid=0 code=0
+[241302] SU shellcmd uid=10257 '|'
+[241305] SU shellcmd uid=10257 'su 10180 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[241320] SU req uid=0 target=10180 cmd='keystore_cli_v2 list'
+[241322] SU decision uid=0 allow=1
+[241382] SU done uid=0 code=0
+[241419] SU shellcmd uid=10257 '|'
+[241421] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[241436] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[241437] SU decision uid=0 allow=1
+[241497] SU done uid=0 code=0
+[241523] SU shellcmd uid=10257 '|'
+[241526] SU shellcmd uid=10257 'su 10076 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[241547] SU req uid=0 target=10076 cmd='keystore_cli_v2 list'
+[241551] SU decision uid=0 allow=1
+[241614] SU done uid=0 code=0
+[241639] SU shellcmd uid=10257 '|'
+[241641] SU shellcmd uid=10257 'su 10224 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[241659] SU req uid=0 target=10224 cmd='keystore_cli_v2 list'
+[241661] SU decision uid=0 allow=1
+[241714] SU done uid=0 code=0
+[241752] SU shellcmd uid=10257 '|'
+[241755] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[241778] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[241780] SU decision uid=0 allow=1
+[241842] SU done uid=0 code=0
+[241866] SU shellcmd uid=10257 '|'
+[241869] SU shellcmd uid=10257 'su 10013 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[241887] SU req uid=0 target=10013 cmd='keystore_cli_v2 list'
+[241893] SU decision uid=0 allow=1
+[241949] SU done uid=0 code=0
+[241998] SU shellcmd uid=10257 '|'
+[242000] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[242017] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[242020] SU decision uid=0 allow=1
+[242080] SU done uid=0 code=0
+[242102] SU shellcmd uid=10257 '|'
+[242105] SU shellcmd uid=10257 'su 10079 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242122] SU req uid=0 target=10079 cmd='keystore_cli_v2 list'
+[242124] SU decision uid=0 allow=1
+[242179] SU done uid=0 code=0
+[242201] SU shellcmd uid=10257 '|'
+[242204] SU shellcmd uid=10257 'su 10253 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242221] SU req uid=0 target=10253 cmd='keystore_cli_v2 list'
+[242228] SU decision uid=0 allow=1
+[242286] SU done uid=0 code=0
+[242337] SU shellcmd uid=10257 '|'
+[242339] SU shellcmd uid=10257 'su 10134 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242355] SU req uid=0 target=10134 cmd='keystore_cli_v2 list'
+[242360] SU decision uid=0 allow=1
+[242416] SU done uid=0 code=0
+[242440] SU shellcmd uid=10257 '|'
+[242442] SU shellcmd uid=10257 'su 10154 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242459] SU req uid=0 target=10154 cmd='keystore_cli_v2 list'
+[242462] SU decision uid=0 allow=1
+[242519] SU done uid=0 code=0
+[242544] SU shellcmd uid=10257 '|'
+[242546] SU shellcmd uid=10257 'su 10166 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242565] SU req uid=0 target=10166 cmd='keystore_cli_v2 list'
+[242567] SU decision uid=0 allow=1
+[242623] SU done uid=0 code=0
+[242663] SU shellcmd uid=10257 '|'
+[242665] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[242682] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[242684] SU decision uid=0 allow=1
+[242743] SU done uid=0 code=0
+[242779] SU shellcmd uid=10257 '|'
+[242781] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242799] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[242801] SU decision uid=0 allow=1
+[242859] SU done uid=0 code=0
+[242892] SU shellcmd uid=10257 '|'
+[242895] SU shellcmd uid=10257 'su 10187 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[242914] SU req uid=0 target=10187 cmd='keystore_cli_v2 list'
+[242917] SU decision uid=0 allow=1
+[242982] SU done uid=0 code=0
+[243013] SU shellcmd uid=10257 '|'
+[243015] SU shellcmd uid=10257 'su 10163 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243033] SU req uid=0 target=10163 cmd='keystore_cli_v2 list'
+[243035] SU decision uid=0 allow=1
+[243096] SU done uid=0 code=0
+[243123] SU shellcmd uid=10257 '|'
+[243126] SU shellcmd uid=10257 'su 10170 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243146] SU req uid=0 target=10170 cmd='keystore_cli_v2 list'
+[243148] SU decision uid=0 allow=1
+[243208] SU done uid=0 code=0
+[243245] SU shellcmd uid=10257 '|'
+[243248] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[243266] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[243268] SU decision uid=0 allow=1
+[243327] SU done uid=0 code=0
+[243363] SU shellcmd uid=10257 '|su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&'
+[243382] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[243384] SU decision uid=0 allow=1
+[243443] SU done uid=0 code=0
+[243468] SU shellcmd uid=10257 '|'
+[243470] SU shellcmd uid=10257 'su 10261 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243491] SU req uid=0 target=10261 cmd='keystore_cli_v2 list'
+[243494] SU decision uid=0 allow=1
+[243546] SU done uid=0 code=0
+[243572] SU shellcmd uid=10257 '|'
+[243575] SU shellcmd uid=10257 'su 10262 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243593] SU req uid=0 target=10262 cmd='keystore_cli_v2 list'
+[243595] SU decision uid=0 allow=1
+[243647] SU done uid=0 code=0
+[243671] SU shellcmd uid=10257 '|'
+[243673] SU shellcmd uid=10257 'su 10021 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243690] SU req uid=0 target=10021 cmd='keystore_cli_v2 list'
+[243693] SU decision uid=0 allow=1
+[243750] SU done uid=0 code=0
+[243833] SU shellcmd uid=10257 '|'
+[243836] SU shellcmd uid=10257 'su 10009 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243853] SU req uid=0 target=10009 cmd='keystore_cli_v2 list'
+[243855] SU decision uid=0 allow=1
+[243910] SU done uid=0 code=0
+[243933] SU shellcmd uid=10257 '|'
+[243935] SU shellcmd uid=10257 'su 10018 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[243951] SU req uid=0 target=10018 cmd='keystore_cli_v2 list'
+[243954] SU decision uid=0 allow=1
+[244008] SU done uid=0 code=0
+[244032] SU shellcmd uid=10257 '|'
+[244034] SU shellcmd uid=10257 'su 10090 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244050] SU req uid=0 target=10090 cmd='keystore_cli_v2 list'
+[244053] SU decision uid=0 allow=1
+[244107] SU done uid=0 code=0
+[244130] SU shellcmd uid=10257 '|'
+[244133] SU shellcmd uid=10257 'su 10140 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244149] SU req uid=0 target=10140 cmd='keystore_cli_v2 list'
+[244152] SU decision uid=0 allow=1
+[244207] SU done uid=0 code=0
+[244228] SU shellcmd uid=10257 '|'
+[244231] SU shellcmd uid=10257 'su 10046 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244247] SU req uid=0 target=10046 cmd='keystore_cli_v2 list'
+[244249] SU decision uid=0 allow=1
+[244303] SU done uid=0 code=0
+[244325] SU shellcmd uid=10257 '|'
+[244327] SU shellcmd uid=10257 'su 10158 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244344] SU req uid=0 target=10158 cmd='keystore_cli_v2 list'
+[244349] SU decision uid=0 allow=1
+[244403] SU done uid=0 code=0
+[244426] SU shellcmd uid=10257 '|'
+[244429] SU shellcmd uid=10257 'su 10213 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244445] SU req uid=0 target=10213 cmd='keystore_cli_v2 list'
+[244447] SU decision uid=0 allow=1
+[244501] SU done uid=0 code=0
+[244538] SU shellcmd uid=10257 '|'
+[244541] SU shellcmd uid=10257 'su 5250 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[244560] SU req uid=0 target=5250 cmd='keystore_cli_v2 list'
+[244562] SU decision uid=0 allow=1
+[244619] SU done uid=0 code=0
+[244650] SU shellcmd uid=10257 '|'
+[244652] SU shellcmd uid=10257 'su 10027 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[244673] SU req uid=0 target=10027 cmd='keystore_cli_v2 list'
+[244677] SU decision uid=0 allow=1
+[244738] SU done uid=0 code=0
+[244773] SU shellcmd uid=10257 '|'
+[244777] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[244797] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[244800] SU decision uid=0 allow=1
+[244863] SU done uid=0 code=0
+[244898] SU shellcmd uid=10257 '|'
+[244901] SU shellcmd uid=10257 'su 5004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[244918] SU req uid=0 target=5004 cmd='keystore_cli_v2 list'
+[244920] SU decision uid=0 allow=1
+[244983] SU done uid=0 code=0
+[245018] SU shellcmd uid=10257 '|'
+[245021] SU shellcmd uid=10257 'su 5004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[245040] SU req uid=0 target=5004 cmd='keystore_cli_v2 list'
+[245043] SU decision uid=0 allow=1
+[245103] SU done uid=0 code=0
+[245140] SU shellcmd uid=10257 '|'
+[245142] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[245160] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[245162] SU decision uid=0 allow=1
+[245219] SU done uid=0 code=0
+[245259] SU shellcmd uid=10257 '|'
+[245261] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[245281] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[245283] SU decision uid=0 allow=1
+[245340] SU done uid=0 code=0
+[245364] SU shellcmd uid=10257 '|'
+[245367] SU shellcmd uid=10257 'su 10200 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[245383] SU req uid=0 target=10200 cmd='keystore_cli_v2 list'
+[245385] SU decision uid=0 allow=1
+[245441] SU done uid=0 code=0
+[245474] SU shellcmd uid=10257 '|'
+[245476] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[245494] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[245498] SU decision uid=0 allow=1
+[245557] SU done uid=0 code=0
+[245615] SU shellcmd uid=10257 '|'
+[245618] SU shellcmd uid=10257 'su 10020 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[245635] SU req uid=0 target=10020 cmd='keystore_cli_v2 list'
+[245637] SU decision uid=0 allow=1
+[245690] SU done uid=0 code=0
+[245715] SU shellcmd uid=10257 '|'
+[245717] SU shellcmd uid=10257 'su 10004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[245734] SU req uid=0 target=10004 cmd='keystore_cli_v2 list'
+[245736] SU decision uid=0 allow=1
+[245792] SU done uid=0 code=0
+[245825] SU shellcmd uid=10257 '|'
+[245827] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[245845] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[245847] SU decision uid=0 allow=1
+[245902] SU done uid=0 code=0
+[245927] SU shellcmd uid=10257 '|'
+[245929] SU shellcmd uid=10257 'su 10251 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[245945] SU req uid=0 target=10251 cmd='keystore_cli_v2 list'
+[245947] SU decision uid=0 allow=1
+[245999] SU done uid=0 code=0
+[246022] SU shellcmd uid=10257 '|'
+[246025] SU shellcmd uid=10257 'su 10035 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246041] SU req uid=0 target=10035 cmd='keystore_cli_v2 list'
+[246043] SU decision uid=0 allow=1
+[246098] SU done uid=0 code=0
+[246130] SU shellcmd uid=10257 '|'
+[246132] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[246148] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[246150] SU decision uid=0 allow=1
+[246204] SU done uid=0 code=0
+[246227] SU shellcmd uid=10257 '|'
+[246229] SU shellcmd uid=10257 'su 10150 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246247] SU req uid=0 target=10150 cmd='keystore_cli_v2 list'
+[246249] SU decision uid=0 allow=1
+[246302] SU done uid=0 code=0
+[246335] SU shellcmd uid=10257 '|'
+[246338] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246355] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[246357] SU decision uid=0 allow=1
+[246413] SU done uid=0 code=0
+[246448] SU shellcmd uid=10257 '|'
+[246451] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[246466] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[246468] SU decision uid=0 allow=1
+[246524] SU done uid=0 code=0
+[246582] SU shellcmd uid=10257 '|'
+[246584] SU shellcmd uid=10257 'su 10052 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246600] SU req uid=0 target=10052 cmd='keystore_cli_v2 list'
+[246602] SU decision uid=0 allow=1
+[246657] SU done uid=0 code=0
+[246680] SU shellcmd uid=10257 '|'
+[246682] SU shellcmd uid=10257 'su 10057 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246699] SU req uid=0 target=10057 cmd='keystore_cli_v2 list'
+[246701] SU decision uid=0 allow=1
+[246756] SU done uid=0 code=0
+[246812] SU shellcmd uid=10257 '|'
+[246814] SU shellcmd uid=10257 'su 10258 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[246831] SU req uid=0 target=10258 cmd='keystore_cli_v2 list'
+[246833] SU decision uid=0 allow=1
+[246885] SU done uid=0 code=0
+[246919] SU shellcmd uid=10257 '|'
+[246921] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[246937] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[246939] SU decision uid=0 allow=1
+[246995] SU done uid=0 code=0
+[247031] SU shellcmd uid=10257 '|'
+[247034] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[247050] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[247052] SU decision uid=0 allow=1
+[247107] SU done uid=0 code=0
+[247129] SU shellcmd uid=10257 '|'
+[247131] SU shellcmd uid=10257 'su 10037 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247149] SU req uid=0 target=10037 cmd='keystore_cli_v2 list'
+[247151] SU decision uid=0 allow=1
+[247206] SU done uid=0 code=0
+[247230] SU shellcmd uid=10257 '|'
+[247232] SU shellcmd uid=10257 'su 10051 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247249] SU req uid=0 target=10051 cmd='keystore_cli_v2 list'
+[247251] SU decision uid=0 allow=1
+[247305] SU done uid=0 code=0
+[247333] SU shellcmd uid=10257 '|'
+[247336] SU shellcmd uid=10257 'su 10203 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247355] SU req uid=0 target=10203 cmd='keystore_cli_v2 list'
+[247357] SU decision uid=0 allow=1
+[247414] SU done uid=0 code=0
+[247440] SU shellcmd uid=10257 '|'
+[247442] SU shellcmd uid=10257 'su 10191 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247463] SU req uid=0 target=10191 cmd='keystore_cli_v2 list'
+[247465] SU decision uid=0 allow=1
+[247516] SU done uid=0 code=0
+[247541] SU shellcmd uid=10257 '|'
+[247543] SU shellcmd uid=10257 'su 10001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247559] SU req uid=0 target=10001 cmd='keystore_cli_v2 list'
+[247562] SU decision uid=0 allow=1
+[247617] SU done uid=0 code=0
+[247652] SU shellcmd uid=10257 '|'
+[247654] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[247671] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[247673] SU decision uid=0 allow=1
+[247738] SU done uid=0 code=0
+[247764] SU shellcmd uid=10257 '|'
+[247767] SU shellcmd uid=10257 'su 10062 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[247785] SU req uid=0 target=10062 cmd='keystore_cli_v2 list'
+[247789] SU decision uid=0 allow=1
+[247849] SU done uid=0 code=0
+[247886] SU shellcmd uid=10257 '|'
+[247889] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[247906] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[247908] SU decision uid=0 allow=1
+[247966] SU done uid=0 code=0
+[247996] SU shellcmd uid=10257 '|'
+[247999] SU shellcmd uid=10257 'su 10028 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248018] SU req uid=0 target=10028 cmd='keystore_cli_v2 list'
+[248021] SU decision uid=0 allow=1
+[248081] SU done uid=0 code=0
+[248106] SU shellcmd uid=10257 '|su 10117 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&'
+[248124] SU req uid=0 target=10117 cmd='keystore_cli_v2 list'
+[248126] SU decision uid=0 allow=1
+[248191] SU done uid=0 code=0
+[248216] SU shellcmd uid=10257 '|'
+[248218] SU shellcmd uid=10257 'su 10136 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248238] SU req uid=0 target=10136 cmd='keystore_cli_v2 list'
+[248240] SU decision uid=0 allow=1
+[248301] SU done uid=0 code=0
+[248330] SU shellcmd uid=10257 '|'
+[248333] SU shellcmd uid=10257 'su 10011 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248352] SU req uid=0 target=10011 cmd='keystore_cli_v2 list'
+[248355] SU decision uid=0 allow=1
+[248414] SU done uid=0 code=0
+[248439] SU shellcmd uid=10257 '|'
+[248441] SU shellcmd uid=10257 'su 10110 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248459] SU req uid=0 target=10110 cmd='keystore_cli_v2 list'
+[248461] SU decision uid=0 allow=1
+[248518] SU done uid=0 code=0
+[248546] SU shellcmd uid=10257 '|'
+[248549] SU shellcmd uid=10257 'su 10217 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248566] SU req uid=0 target=10217 cmd='keystore_cli_v2 list'
+[248569] SU decision uid=0 allow=1
+[248628] SU done uid=0 code=0
+[248661] SU shellcmd uid=10257 '|'
+[248664] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[248684] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[248686] SU decision uid=0 allow=1
+[248744] SU done uid=0 code=0
+[248766] SU shellcmd uid=10257 '|'
+[248768] SU shellcmd uid=10257 'su 10214 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248784] SU req uid=0 target=10214 cmd='keystore_cli_v2 list'
+[248786] SU decision uid=0 allow=1
+[248847] SU done uid=0 code=0
+[248869] SU shellcmd uid=10257 '|'
+[248872] SU shellcmd uid=10257 'su 10105 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[248889] SU req uid=0 target=10105 cmd='keystore_cli_v2 list'
+[248891] SU decision uid=0 allow=1
+[248946] SU done uid=0 code=0
+[248976] SU shellcmd uid=10257 '|'
+[248978] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[248995] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[248996] SU decision uid=0 allow=1
+[249050] SU done uid=0 code=0
+[249072] SU shellcmd uid=10257 '|'
+[249074] SU shellcmd uid=10257 'su 10044 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249091] SU req uid=0 target=10044 cmd='keystore_cli_v2 list'
+[249093] SU decision uid=0 allow=1
+[249148] SU done uid=0 code=0
+[249181] SU shellcmd uid=10257 '|'
+[249184] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[249201] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[249203] SU decision uid=0 allow=1
+[249261] SU done uid=0 code=0
+[249298] SU shellcmd uid=10257 '|'
+[249300] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[249317] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[249319] SU decision uid=0 allow=1
+[249375] SU done uid=0 code=0
+[249427] SU shellcmd uid=10257 '|'
+[249429] SU shellcmd uid=10257 'su 10081 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249448] SU req uid=0 target=10081 cmd='keystore_cli_v2 list'
+[249450] SU decision uid=0 allow=1
+[249512] SU done uid=0 code=0
+[249563] SU shellcmd uid=10257 '|'
+[249565] SU shellcmd uid=10257 'su 10058 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249582] SU req uid=0 target=10058 cmd='keystore_cli_v2 list'
+[249584] SU decision uid=0 allow=1
+[249639] SU done uid=0 code=0
+[249662] SU shellcmd uid=10257 '|'
+[249663] SU shellcmd uid=10257 'su 10157 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249680] SU req uid=0 target=10157 cmd='keystore_cli_v2 list'
+[249682] SU decision uid=0 allow=1
+[249736] SU done uid=0 code=0
+[249759] SU shellcmd uid=10257 '|'
+[249761] SU shellcmd uid=10257 'su 10068 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249780] SU req uid=0 target=10068 cmd='keystore_cli_v2 list'
+[249782] SU decision uid=0 allow=1
+[249843] SU done uid=0 code=0
+[249867] SU shellcmd uid=10257 '|'
+[249871] SU shellcmd uid=10257 'su 10255 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[249890] SU req uid=0 target=10255 cmd='keystore_cli_v2 list'
+[249893] SU decision uid=0 allow=1
+[249956] SU done uid=0 code=0
+[249981] SU shellcmd uid=10257 '|'
+[249983] SU shellcmd uid=10257 'su 10092 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250003] SU req uid=0 target=10092 cmd='keystore_cli_v2 list'
+[250005] SU decision uid=0 allow=1
+[250069] SU done uid=0 code=0
+[250105] SU shellcmd uid=10257 '|'
+[250107] SU shellcmd uid=10257 'su 5025 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[250125] SU req uid=0 target=5025 cmd='keystore_cli_v2 list'
+[250127] SU decision uid=0 allow=1
+[250188] SU done uid=0 code=0
+[250223] SU shellcmd uid=10257 '|'
+[250225] SU shellcmd uid=10257 'su 5004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[250244] SU req uid=0 target=5004 cmd='keystore_cli_v2 list'
+[250246] SU decision uid=0 allow=1
+[250308] SU done uid=0 code=0
+[250329] SU shellcmd uid=10257 '|'
+[250331] SU shellcmd uid=10257 'su 10121 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250351] SU req uid=0 target=10121 cmd='keystore_cli_v2 list'
+[250353] SU decision uid=0 allow=1
+[250417] SU done uid=0 code=0
+[250442] SU shellcmd uid=10257 '|'
+[250444] SU shellcmd uid=10257 'su 10247 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250462] SU req uid=0 target=10247 cmd='keystore_cli_v2 list'
+[250464] SU decision uid=0 allow=1
+[250524] SU done uid=0 code=0
+[250554] SU shellcmd uid=10257 '|'
+[250557] SU shellcmd uid=10257 'su 10026 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250573] SU req uid=0 target=10026 cmd='keystore_cli_v2 list'
+[250575] SU decision uid=0 allow=1
+[250628] SU done uid=0 code=0
+[250660] SU shellcmd uid=10257 '|'
+[250663] SU shellcmd uid=10257 'su 1068 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[250680] SU req uid=0 target=1068 cmd='keystore_cli_v2 list'
+[250681] SU decision uid=0 allow=1
+[250739] SU done uid=0 code=0
+[250771] SU shellcmd uid=10257 '|'
+[250773] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[250792] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[250794] SU decision uid=0 allow=1
+[250853] SU done uid=0 code=0
+[250875] SU shellcmd uid=10257 '|'
+[250877] SU shellcmd uid=10257 'su 10142 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250895] SU req uid=0 target=10142 cmd='keystore_cli_v2 list'
+[250897] SU decision uid=0 allow=1
+[250952] SU done uid=0 code=0
+[250977] SU shellcmd uid=10257 '|'
+[250979] SU shellcmd uid=10257 'su 10025 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[250998] SU req uid=0 target=10025 cmd='keystore_cli_v2 list'
+[251000] SU decision uid=0 allow=1
+[251062] SU done uid=0 code=0
+[251090] SU shellcmd uid=10257 '|'
+[251093] SU shellcmd uid=10257 'su 10103 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[251110] SU req uid=0 target=10103 cmd='keystore_cli_v2 list'
+[251112] SU decision uid=0 allow=1
+[251171] SU done uid=0 code=0
+[251194] SU shellcmd uid=10257 '|'
+[251197] SU shellcmd uid=10257 'su 10099 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[251214] SU req uid=0 target=10099 cmd='keystore_cli_v2 list'
+[251216] SU decision uid=0 allow=1
+[251277] SU done uid=0 code=0
+[251313] SU shellcmd uid=10257 '|'
+[251315] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[251332] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[251335] SU decision uid=0 allow=1
+[251391] SU done uid=0 code=0
+[251423] SU shellcmd uid=10257 '|'
+[251425] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[251442] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[251444] SU decision uid=0 allow=1
+[251500] SU done uid=0 code=0
+[251553] SU shellcmd uid=10257 '|'
+[251556] SU shellcmd uid=10257 'su 10096 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[251572] SU req uid=0 target=10096 cmd='keystore_cli_v2 list'
+[251574] SU decision uid=0 allow=1
+[251636] SU done uid=0 code=0
+[251661] SU shellcmd uid=10257 '|'
+[251663] SU shellcmd uid=10257 'su 10045 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[251680] SU req uid=0 target=10045 cmd='keystore_cli_v2 list'
+[251682] SU decision uid=0 allow=1
+[251739] SU done uid=0 code=0
+[251796] SU shellcmd uid=10257 '|'
+[251798] SU shellcmd uid=10257 'su 10133 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[251819] SU req uid=0 target=10133 cmd='keystore_cli_v2 list'
+[251824] SU decision uid=0 allow=1
+[251886] SU done uid=0 code=0
+[251924] SU shellcmd uid=10257 '|'
+[251926] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[251944] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[251946] SU decision uid=0 allow=1
+[252002] SU done uid=0 code=0
+[252027] SU shellcmd uid=10257 '|'
+[252029] SU shellcmd uid=10257 'su 10019 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252049] SU req uid=0 target=10019 cmd='keystore_cli_v2 list'
+[252051] SU decision uid=0 allow=1
+[252106] SU done uid=0 code=0
+[252131] SU shellcmd uid=10257 '|'
+[252133] SU shellcmd uid=10257 'su 10113 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252149] SU req uid=0 target=10113 cmd='keystore_cli_v2 list'
+[252151] SU decision uid=0 allow=1
+[252211] SU done uid=0 code=0
+[252233] SU shellcmd uid=10257 '|'
+[252235] SU shellcmd uid=10257 'su 10130 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252251] SU req uid=0 target=10130 cmd='keystore_cli_v2 list'
+[252252] SU decision uid=0 allow=1
+[252309] SU done uid=0 code=0
+[252345] SU shellcmd uid=10257 '|'
+[252347] SU shellcmd uid=10257 'su 10204 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252365] SU req uid=0 target=10204 cmd='keystore_cli_v2 list'
+[252367] SU decision uid=0 allow=1
+[252420] SU done uid=0 code=0
+[252446] SU shellcmd uid=10257 '|'
+[252448] SU shellcmd uid=10257 'su 10198 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252469] SU req uid=0 target=10198 cmd='keystore_cli_v2 list'
+[252481] SU decision uid=0 allow=1
+[252544] SU done uid=0 code=0
+[252568] SU shellcmd uid=10257 '|'
+[252571] SU shellcmd uid=10257 'su 10039 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252587] SU req uid=0 target=10039 cmd='keystore_cli_v2 list'
+[252590] SU decision uid=0 allow=1
+[252646] SU done uid=0 code=0
+[252672] SU shellcmd uid=10257 '|'
+[252675] SU shellcmd uid=10257 'su 10071 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252692] SU req uid=0 target=10071 cmd='keystore_cli_v2 list'
+[252695] SU decision uid=0 allow=1
+[252751] SU done uid=0 code=0
+[252775] SU shellcmd uid=10257 '|'
+[252778] SU shellcmd uid=10257 'su 10249 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252795] SU req uid=0 target=10249 cmd='keystore_cli_v2 list'
+[252797] SU decision uid=0 allow=1
+[252852] SU done uid=0 code=0
+[252878] SU shellcmd uid=10257 '|'
+[252880] SU shellcmd uid=10257 'su 10124 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[252899] SU req uid=0 target=10124 cmd='keystore_cli_v2 list'
+[252901] SU decision uid=0 allow=1
+[252962] SU done uid=0 code=0
+[252986] SU shellcmd uid=10257 '|'
+[252988] SU shellcmd uid=10257 'su 10160 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253005] SU req uid=0 target=10160 cmd='keystore_cli_v2 list'
+[253007] SU decision uid=0 allow=1
+[253062] SU done uid=0 code=0
+[253084] SU shellcmd uid=10257 '|'
+[253086] SU shellcmd uid=10257 'su 10226 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253102] SU req uid=0 target=10226 cmd='keystore_cli_v2 list'
+[253104] SU decision uid=0 allow=1
+[253159] SU done uid=0 code=0
+[253186] SU shellcmd uid=10257 '|'
+[253189] SU shellcmd uid=10257 'su 10252 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253205] SU req uid=0 target=10252 cmd='keystore_cli_v2 list'
+[253207] SU decision uid=0 allow=1
+[253264] SU done uid=0 code=0
+[253297] SU shellcmd uid=10257 '|'
+[253298] SU shellcmd uid=10257 'su 10148 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253313] SU req uid=0 target=10148 cmd='keystore_cli_v2 list'
+[253315] SU decision uid=0 allow=1
+[253362] SU done uid=0 code=0
+[253397] SU shellcmd uid=10257 '|'
+[253400] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[253418] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[253421] SU decision uid=0 allow=1
+[253471] SU done uid=0 code=0
+[253494] SU shellcmd uid=10257 '|'
+[253500] SU shellcmd uid=10257 'su 10192 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253516] SU req uid=0 target=10192 cmd='keystore_cli_v2 list'
+[253517] SU decision uid=0 allow=1
+[253562] SU done uid=0 code=0
+[253581] SU shellcmd uid=10257 '|'
+[253584] SU shellcmd uid=10257 'su 10008 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[253597] SU req uid=0 target=10008 cmd='keystore_cli_v2 list'
+[253599] SU decision uid=0 allow=1
+[253645] SU done uid=0 code=0
+[253677] SU shellcmd uid=10257 '|'
+[253680] SU shellcmd uid=10257 'su 1073 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[253695] SU req uid=0 target=1073 cmd='keystore_cli_v2 list'
+[253696] SU decision uid=0 allow=1
+[253740] SU done uid=0 code=0
+[253766] SU shellcmd uid=10257 '|'
+[253768] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[253780] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[253782] SU decision uid=0 allow=1
+[253831] SU done uid=0 code=0
+[253857] SU shellcmd uid=10257 '|su 10201 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&'
+[253885] SU req uid=0 target=10201 cmd='keystore_cli_v2 list'
+[253886] SU decision uid=0 allow=1
+[253938] SU done uid=0 code=0
+[253964] SU shellcmd uid=10257 '|'
+[253966] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[253979] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[253980] SU decision uid=0 allow=1
+[254020] SU done uid=0 code=0
+[254053] SU shellcmd uid=10257 '|'
+[254054] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[254068] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[254069] SU decision uid=0 allow=1
+[254113] SU done uid=0 code=0
+[254136] SU shellcmd uid=10257 '|'
+[254138] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[254150] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[254152] SU decision uid=0 allow=1
+[254194] SU done uid=0 code=0
+[254214] SU shellcmd uid=10257 '|'
+[254219] SU shellcmd uid=10257 'su 10195 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254231] SU req uid=0 target=10195 cmd='keystore_cli_v2 list'
+[254233] SU decision uid=0 allow=1
+[254274] SU done uid=0 code=0
+[254294] SU shellcmd uid=10257 '|'
+[254296] SU shellcmd uid=10257 'su 10244 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254316] SU req uid=0 target=10244 cmd='keystore_cli_v2 list'
+[254321] SU decision uid=0 allow=1
+[254383] SU done uid=0 code=0
+[254428] SU shellcmd uid=10257 '|'
+[254430] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[254442] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[254443] SU decision uid=0 allow=1
+[254489] SU done uid=0 code=0
+[254502] SU shellcmd uid=10257 '|'
+[254503] SU shellcmd uid=10257 'su 10109 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254515] SU req uid=0 target=10109 cmd='keystore_cli_v2 list'
+[254516] SU decision uid=0 allow=1
+[254555] SU done uid=0 code=0
+[254569] SU shellcmd uid=10257 '|'
+[254570] SU shellcmd uid=10257 'su 10100 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254582] SU req uid=0 target=10100 cmd='keystore_cli_v2 list'
+[254583] SU decision uid=0 allow=1
+[254622] SU done uid=0 code=0
+[254687] SU shellcmd uid=10257 '|'
+[254688] SU shellcmd uid=10257 'su 10188 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254700] SU req uid=0 target=10188 cmd='keystore_cli_v2 list'
+[254701] SU decision uid=0 allow=1
+[254740] SU done uid=0 code=0
+[254759] SU shellcmd uid=10257 '|'
+[254761] SU shellcmd uid=10257 'su 10188 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254773] SU req uid=0 target=10188 cmd='keystore_cli_v2 list'
+[254774] SU decision uid=0 allow=1
+[254812] SU done uid=0 code=0
+[254825] SU shellcmd uid=10257 '|'
+[254826] SU shellcmd uid=10257 'su 10193 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254836] SU req uid=0 target=10193 cmd='keystore_cli_v2 list'
+[254838] SU decision uid=0 allow=1
+[254874] SU done uid=0 code=0
+[254886] SU shellcmd uid=10257 '|'
+[254887] SU shellcmd uid=10257 'su 10162 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254897] SU req uid=0 target=10162 cmd='keystore_cli_v2 list'
+[254899] SU decision uid=0 allow=1
+[254937] SU done uid=0 code=0
+[254948] SU shellcmd uid=10257 '|'
+[254949] SU shellcmd uid=10257 'su 10218 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[254960] SU req uid=0 target=10218 cmd='keystore_cli_v2 list'
+[254961] SU decision uid=0 allow=1
+[254998] SU done uid=0 code=0
+[255009] SU shellcmd uid=10257 '|'
+[255010] SU shellcmd uid=10257 'su 10146 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255021] SU req uid=0 target=10146 cmd='keystore_cli_v2 list'
+[255022] SU decision uid=0 allow=1
+[255058] SU done uid=0 code=0
+[255076] SU shellcmd uid=10257 '|'
+[255077] SU shellcmd uid=10257 'su 10047 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255088] SU req uid=0 target=10047 cmd='keystore_cli_v2 list'
+[255089] SU decision uid=0 allow=1
+[255125] SU done uid=0 code=0
+[255138] SU shellcmd uid=10257 '|'
+[255139] SU shellcmd uid=10257 'su 10182 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255150] SU req uid=0 target=10182 cmd='keystore_cli_v2 list'
+[255151] SU decision uid=0 allow=1
+[255187] SU done uid=0 code=0
+[255199] SU shellcmd uid=10257 '|'
+[255200] SU shellcmd uid=10257 'su 10131 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255211] SU req uid=0 target=10131 cmd='keystore_cli_v2 list'
+[255212] SU decision uid=0 allow=1
+[255248] SU done uid=0 code=0
+[255267] SU shellcmd uid=10257 '|'
+[255268] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[255279] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[255280] SU decision uid=0 allow=1
+[255316] SU done uid=0 code=0
+[255331] SU shellcmd uid=10257 '|'
+[255333] SU shellcmd uid=10257 'su 10003 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255347] SU req uid=0 target=10003 cmd='keystore_cli_v2 list'
+[255349] SU decision uid=0 allow=1
+[255400] SU done uid=0 code=0
+[255436] SU shellcmd uid=10257 '|'
+[255438] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[255454] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[255456] SU decision uid=0 allow=1
+[255502] SU done uid=0 code=0
+[255552] SU shellcmd uid=10257 '|'
+[255554] SU shellcmd uid=10257 'su 10169 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255566] SU req uid=0 target=10169 cmd='keystore_cli_v2 list'
+[255568] SU decision uid=0 allow=1
+[255607] SU done uid=0 code=0
+[255629] SU shellcmd uid=10257 '|'
+[255631] SU shellcmd uid=10257 'su 10015 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255645] SU req uid=0 target=10015 cmd='keystore_cli_v2 list'
+[255647] SU decision uid=0 allow=1
+[255689] SU done uid=0 code=0
+[255712] SU shellcmd uid=10257 '|'
+[255714] SU shellcmd uid=10257 'su 10102 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255727] SU req uid=0 target=10102 cmd='keystore_cli_v2 list'
+[255728] SU decision uid=0 allow=1
+[255774] SU done uid=0 code=0
+[255800] SU shellcmd uid=10257 '|'
+[255802] SU shellcmd uid=10257 'su 10038 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255816] SU req uid=0 target=10038 cmd='keystore_cli_v2 list'
+[255818] SU decision uid=0 allow=1
+[255862] SU done uid=0 code=0
+[255884] SU shellcmd uid=10257 '|'
+[255886] SU shellcmd uid=10257 'su 10078 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255898] SU req uid=0 target=10078 cmd='keystore_cli_v2 list'
+[255899] SU decision uid=0 allow=1
+[255945] SU done uid=0 code=0
+[255968] SU shellcmd uid=10257 '|'
+[255970] SU shellcmd uid=10257 'su 10101 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[255984] SU req uid=0 target=10101 cmd='keystore_cli_v2 list'
+[255986] SU decision uid=0 allow=1
+[256027] SU done uid=0 code=0
+[256050] SU shellcmd uid=10257 '|'
+[256052] SU shellcmd uid=10257 'su 10023 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256065] SU req uid=0 target=10023 cmd='keystore_cli_v2 list'
+[256066] SU decision uid=0 allow=1
+[256105] SU done uid=0 code=0
+[256128] SU shellcmd uid=10257 '|'
+[256130] SU shellcmd uid=10257 'su 10155 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256145] SU req uid=0 target=10155 cmd='keystore_cli_v2 list'
+[256146] SU decision uid=0 allow=1
+[256190] SU done uid=0 code=0
+[256214] SU shellcmd uid=10257 '|'
+[256216] SU shellcmd uid=10257 'su 10257 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256230] SU req uid=0 target=10257 cmd='keystore_cli_v2 list'
+[256232] SU decision uid=0 allow=1
+[256280] SU done uid=0 code=0
+[256308] SU shellcmd uid=10257 '|'
+[256310] SU shellcmd uid=10257 'su 10053 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256325] SU req uid=0 target=10053 cmd='keystore_cli_v2 list'
+[256327] SU decision uid=0 allow=1
+[256367] SU done uid=0 code=0
+[256392] SU shellcmd uid=10257 '|'
+[256394] SU shellcmd uid=10257 'su 10077 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256409] SU req uid=0 target=10077 cmd='keystore_cli_v2 list'
+[256411] SU decision uid=0 allow=1
+[256453] SU done uid=0 code=0
+[256476] SU shellcmd uid=10257 '|'
+[256478] SU shellcmd uid=10257 'su 10225 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256493] SU req uid=0 target=10225 cmd='keystore_cli_v2 list'
+[256494] SU decision uid=0 allow=1
+[256535] SU done uid=0 code=0
+[256561] SU shellcmd uid=10257 '|'
+[256563] SU shellcmd uid=10257 'su 10010 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256577] SU req uid=0 target=10010 cmd='keystore_cli_v2 list'
+[256578] SU decision uid=0 allow=1
+[256621] SU done uid=0 code=0
+[256699] SU shellcmd uid=10257 '|'
+[256701] SU shellcmd uid=10257 'su 10248 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256718] SU req uid=0 target=10248 cmd='keystore_cli_v2 list'
+[256720] SU decision uid=0 allow=1
+[256772] SU done uid=0 code=0
+[256795] SU shellcmd uid=10257 '|'
+[256798] SU shellcmd uid=10257 'su 10132 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[256815] SU req uid=0 target=10132 cmd='keystore_cli_v2 list'
+[256817] SU decision uid=0 allow=1
+[256870] SU done uid=0 code=0
+[256908] SU shellcmd uid=10257 '|'
+[256910] SU shellcmd uid=10257 'su 5021 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[256924] SU req uid=0 target=5021 cmd='keystore_cli_v2 list'
+[256926] SU decision uid=0 allow=1
+[256969] SU done uid=0 code=0
+[256995] SU shellcmd uid=10257 '|'
+[256997] SU shellcmd uid=10257 'su 10197 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257010] SU req uid=0 target=10197 cmd='keystore_cli_v2 list'
+[257012] SU decision uid=0 allow=1
+[257054] SU done uid=0 code=0
+[257077] SU shellcmd uid=10257 '|'
+[257079] SU shellcmd uid=10257 'su 10087 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257096] SU req uid=0 target=10087 cmd='keystore_cli_v2 list'
+[257097] SU decision uid=0 allow=1
+[257141] SU done uid=0 code=0
+[257162] SU shellcmd uid=10257 '|'
+[257163] SU shellcmd uid=10257 'su 10094 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257180] SU req uid=0 target=10094 cmd='keystore_cli_v2 list'
+[257182] SU decision uid=0 allow=1
+[257225] SU done uid=0 code=0
+[257250] SU shellcmd uid=10257 '|'
+[257254] SU shellcmd uid=10257 'su 10063 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257270] SU req uid=0 target=10063 cmd='keystore_cli_v2 list'
+[257272] SU decision uid=0 allow=1
+[257319] SU done uid=0 code=0
+[257351] SU shellcmd uid=10257 '|'
+[257354] SU shellcmd uid=10257 'su 10194 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257371] SU req uid=0 target=10194 cmd='keystore_cli_v2 list'
+[257372] SU decision uid=0 allow=1
+[257423] SU done uid=0 code=0
+[257451] SU shellcmd uid=10257 '|'
+[257453] SU shellcmd uid=10257 'su 10143 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257466] SU req uid=0 target=10143 cmd='keystore_cli_v2 list'
+[257468] SU decision uid=0 allow=1
+[257519] SU done uid=0 code=0
+[257550] SU shellcmd uid=10257 '|'
+[257552] SU shellcmd uid=10257 'su 10031 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257567] SU req uid=0 target=10031 cmd='keystore_cli_v2 list'
+[257568] SU decision uid=0 allow=1
+[257621] SU done uid=0 code=0
+[257648] SU shellcmd uid=10257 '|'
+[257650] SU shellcmd uid=10257 'su 10202 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257666] SU req uid=0 target=10202 cmd='keystore_cli_v2 list'
+[257668] SU decision uid=0 allow=1
+[257715] SU done uid=0 code=0
+[257743] SU shellcmd uid=10257 '|'
+[257745] SU shellcmd uid=10257 'su 10127 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257762] SU req uid=0 target=10127 cmd='keystore_cli_v2 list'
+[257764] SU decision uid=0 allow=1
+[257818] SU done uid=0 code=0
+[257847] SU shellcmd uid=10257 '|'
+[257849] SU shellcmd uid=10257 'su 10048 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257865] SU req uid=0 target=10048 cmd='keystore_cli_v2 list'
+[257867] SU decision uid=0 allow=1
+[257919] SU done uid=0 code=0
+[257944] SU shellcmd uid=10257 '|'
+[257946] SU shellcmd uid=10257 'su 10164 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[257962] SU req uid=0 target=10164 cmd='keystore_cli_v2 list'
+[257964] SU decision uid=0 allow=1
+[258018] SU done uid=0 code=0
+[258059] SU shellcmd uid=10257 '|'
+[258062] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[258077] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[258078] SU decision uid=0 allow=1
+[258123] SU done uid=0 code=0
+[258150] SU shellcmd uid=10257 '|'
+[258153] SU shellcmd uid=10257 'su 10054 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258169] SU req uid=0 target=10054 cmd='keystore_cli_v2 list'
+[258171] SU decision uid=0 allow=1
+[258230] SU done uid=0 code=0
+[258269] SU shellcmd uid=10257 '|'
+[258271] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[258290] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[258291] SU decision uid=0 allow=1
+[258346] SU done uid=0 code=0
+[258376] SU shellcmd uid=10257 '|'
+[258378] SU shellcmd uid=10257 'su 10254 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258398] SU req uid=0 target=10254 cmd='keystore_cli_v2 list'
+[258401] SU decision uid=0 allow=1
+[258461] SU done uid=0 code=0
+[258485] SU shellcmd uid=10257 '|'
+[258487] SU shellcmd uid=10257 'su 10152 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258507] SU req uid=0 target=10152 cmd='keystore_cli_v2 list'
+[258509] SU decision uid=0 allow=1
+[258566] SU done uid=0 code=0
+[258594] SU shellcmd uid=10257 '|su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258611] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[258613] SU decision uid=0 allow=1
+[258678] SU done uid=0 code=0
+[258729] SU shellcmd uid=10257 '|'
+[258730] SU shellcmd uid=10257 'su 10098 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258745] SU req uid=0 target=10098 cmd='keystore_cli_v2 list'
+[258746] SU decision uid=0 allow=1
+[258804] SU done uid=0 code=0
+[258838] SU shellcmd uid=10257 '|'
+[258840] SU shellcmd uid=10257 'su 5006 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[258858] SU req uid=0 target=5006 cmd='keystore_cli_v2 list'
+[258860] SU decision uid=0 allow=1
+[258921] SU done uid=0 code=0
+[258945] SU shellcmd uid=10257 '|'
+[258947] SU shellcmd uid=10257 'su 10006 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[258963] SU req uid=0 target=10006 cmd='keystore_cli_v2 list'
+[258964] SU decision uid=0 allow=1
+[259017] SU done uid=0 code=0
+[259047] SU shellcmd uid=10257 '|'
+[259050] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[259066] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[259068] SU decision uid=0 allow=1
+[259116] SU done uid=0 code=0
+[259141] SU shellcmd uid=10257 '|'
+[259144] SU shellcmd uid=10257 'su 10034 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259162] SU req uid=0 target=10034 cmd='keystore_cli_v2 list'
+[259165] SU decision uid=0 allow=1
+[259221] SU done uid=0 code=0
+[259260] SU shellcmd uid=10257 '|'
+[259262] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[259277] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[259280] SU decision uid=0 allow=1
+[259330] SU done uid=0 code=0
+[259398] SU shellcmd uid=10257 '|'
+[259400] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259420] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[259422] SU decision uid=0 allow=1
+[259477] SU done uid=0 code=0
+[259533] SU shellcmd uid=10257 '|'
+[259534] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[259551] SU req uid=10253 target=0 cmd='(persistent shell)'
+[259552] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[259554] SU decision uid=0 allow=1
+[259610] SU done uid=0 code=0
+[259660] SU shellcmd uid=10257 '|'
+[259662] SU shellcmd uid=10257 'su 10120 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259676] SU req uid=0 target=10120 cmd='keystore_cli_v2 list'
+[259677] SU decision uid=0 allow=1
+[259727] SU done uid=0 code=0
+[259749] SU shellcmd uid=10257 '|'
+[259753] SU shellcmd uid=10257 'su 10147 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259773] SU req uid=0 target=10147 cmd='keystore_cli_v2 list'
+[259775] SU decision uid=0 allow=1
+[259821] SU done uid=0 code=0
+[259844] SU shellcmd uid=10257 '|'
+[259846] SU shellcmd uid=10257 'su 10209 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259861] SU req uid=0 target=10209 cmd='keystore_cli_v2 list'
+[259863] SU decision uid=0 allow=1
+[259908] SU done uid=0 code=0
+[259934] SU shellcmd uid=10257 '|'
+[259936] SU shellcmd uid=10257 'su 10043 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[259949] SU req uid=0 target=10043 cmd='keystore_cli_v2 list'
+[259951] SU decision uid=0 allow=1
+[259994] SU done uid=0 code=0
+[260039] SU shellcmd uid=10257 '|'
+[260041] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260054] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[260055] SU decision uid=0 allow=1
+[260098] SU done uid=0 code=0
+[260116] SU shellcmd uid=10257 '|'
+[260118] SU shellcmd uid=10257 'su 10139 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260131] SU req uid=0 target=10139 cmd='keystore_cli_v2 list'
+[260133] SU decision uid=0 allow=1
+[260177] SU done uid=0 code=0
+[260201] SU shellcmd uid=10257 '|'
+[260202] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260217] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[260218] SU decision uid=0 allow=1
+[260260] SU done uid=0 code=0
+[260286] SU shellcmd uid=10257 '|'
+[260290] SU shellcmd uid=10257 'su 10055 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260309] SU req uid=0 target=10055 cmd='keystore_cli_v2 list'
+[260310] SU decision uid=0 allow=1
+[260357] SU done uid=0 code=0
+[260393] SU shellcmd uid=10257 '|'
+[260395] SU shellcmd uid=10257 'su 10179 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260407] SU req uid=0 target=10179 cmd='keystore_cli_v2 list'
+[260408] SU decision uid=0 allow=1
+[260450] SU done uid=0 code=0
+[260472] SU shellcmd uid=10257 '|'
+[260473] SU shellcmd uid=10257 'su 1073 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260485] SU req uid=0 target=1073 cmd='keystore_cli_v2 list'
+[260487] SU decision uid=0 allow=1
+[260525] SU done uid=0 code=0
+[260541] SU shellcmd uid=10257 '|'
+[260543] SU shellcmd uid=10257 'su 10215 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260554] SU req uid=0 target=10215 cmd='keystore_cli_v2 list'
+[260556] SU decision uid=0 allow=1
+[260591] SU done uid=0 code=0
+[260623] SU shellcmd uid=10257 '|'
+[260624] SU shellcmd uid=10257 'su 10178 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260635] SU req uid=0 target=10178 cmd='keystore_cli_v2 list'
+[260636] SU decision uid=0 allow=1
+[260672] SU done uid=0 code=0
+[260692] SU shellcmd uid=10257 '|'
+[260694] SU shellcmd uid=10257 'su 5026 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260704] SU req uid=0 target=5026 cmd='keystore_cli_v2 list'
+[260706] SU decision uid=0 allow=1
+[260744] SU done uid=0 code=0
+[260769] SU shellcmd uid=10257 '|'
+[260773] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260786] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[260791] SU decision uid=0 allow=1
+[260834] SU done uid=0 code=0
+[260878] SU shellcmd uid=10257 '|'
+[260881] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[260895] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[260898] SU decision uid=0 allow=1
+[260943] SU done uid=0 code=0
+[260957] SU shellcmd uid=10257 '|'
+[260964] SU shellcmd uid=10257 'su 10172 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[260985] SU req uid=0 target=10172 cmd='keystore_cli_v2 list'
+[260987] SU decision uid=0 allow=1
+[261031] SU done uid=0 code=0
+[261044] SU shellcmd uid=10257 '|'
+[261046] SU shellcmd uid=10257 'su 10171 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[261061] SU req uid=0 target=10171 cmd='keystore_cli_v2 list'
+[261063] SU decision uid=0 allow=1
+[261106] SU done uid=0 code=0
+[261145] SU shellcmd uid=10257 '|'
+[261148] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261163] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[261164] SU decision uid=0 allow=1
+[261212] SU done uid=0 code=0
+[261232] SU shellcmd uid=10257 '|'
+[261235] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261250] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[261251] SU decision uid=0 allow=1
+[261291] SU done uid=0 code=0
+[261320] SU shellcmd uid=10257 '|'
+[261322] SU shellcmd uid=10257 'su 10123 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[261335] SU req uid=0 target=10123 cmd='keystore_cli_v2 list'
+[261336] SU decision uid=0 allow=1
+[261382] SU done uid=0 code=0
+[261410] SU shellcmd uid=10257 '|'
+[261412] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261427] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[261431] SU decision uid=0 allow=1
+[261474] SU done uid=0 code=0
+[261495] SU shellcmd uid=10257 '|'
+[261497] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261510] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[261511] SU decision uid=0 allow=1
+[261553] SU done uid=0 code=0
+[261568] SU shellcmd uid=10257 '|'
+[261570] SU shellcmd uid=10257 'su 10260 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[261583] SU req uid=0 target=10260 cmd='keystore_cli_v2 list'
+[261585] SU decision uid=0 allow=1
+[261627] SU done uid=0 code=0
+[261663] SU shellcmd uid=10257 '|'
+[261666] SU shellcmd uid=10257 'su 10074 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[261680] SU req uid=0 target=10074 cmd='keystore_cli_v2 list'
+[261684] SU decision uid=0 allow=1
+[261733] SU done uid=0 code=0
+[261757] SU shellcmd uid=10257 '|'
+[261759] SU shellcmd uid=10257 'su 10183 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[261776] SU req uid=0 target=10183 cmd='keystore_cli_v2 list'
+[261778] SU decision uid=0 allow=1
+[261822] SU done uid=0 code=0
+[261854] SU shellcmd uid=10257 '|'
+[261857] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261872] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[261874] SU decision uid=0 allow=1
+[261925] SU done uid=0 code=0
+[261981] SU shellcmd uid=10257 '|'
+[261983] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[261998] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[262000] SU decision uid=0 allow=1
+[262049] SU done uid=0 code=0
+[262095] SU shellcmd uid=10257 '|'
+[262097] SU shellcmd uid=10257 'su 10221 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262111] SU req uid=0 target=10221 cmd='keystore_cli_v2 list'
+[262113] SU decision uid=0 allow=1
+[262160] SU done uid=0 code=0
+[262183] SU shellcmd uid=10257 '|'
+[262186] SU shellcmd uid=10257 'su 10064 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262200] SU req uid=0 target=10064 cmd='keystore_cli_v2 list'
+[262202] SU decision uid=0 allow=1
+[262251] SU done uid=0 code=0
+[262333] SU shellcmd uid=10257 '|'
+[262335] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[262350] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[262352] SU decision uid=0 allow=1
+[262396] SU done uid=0 code=0
+[262419] SU shellcmd uid=10257 '|'
+[262421] SU shellcmd uid=10257 'su 10014 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262433] SU req uid=0 target=10014 cmd='keystore_cli_v2 list'
+[262435] SU decision uid=0 allow=1
+[262477] SU done uid=0 code=0
+[262511] SU shellcmd uid=10257 '|'
+[262513] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[262529] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[262531] SU decision uid=0 allow=1
+[262573] SU done uid=0 code=0
+[262602] SU shellcmd uid=10257 '|'
+[262604] SU shellcmd uid=10257 'su 10256 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262621] SU req uid=0 target=10256 cmd='keystore_cli_v2 list'
+[262623] SU decision uid=0 allow=1
+[262674] SU done uid=0 code=0
+[262721] SU shellcmd uid=10257 '|'
+[262723] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[262742] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[262744] SU decision uid=0 allow=1
+[262799] SU done uid=0 code=0
+[262824] SU shellcmd uid=10257 '|'
+[262826] SU shellcmd uid=10257 'su 10050 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262840] SU req uid=0 target=10050 cmd='keystore_cli_v2 list'
+[262842] SU decision uid=0 allow=1
+[262883] SU done uid=0 code=0
+[262907] SU shellcmd uid=10257 '|'
+[262909] SU shellcmd uid=10257 'su 10032 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[262922] SU req uid=0 target=10032 cmd='keystore_cli_v2 list'
+[262924] SU decision uid=0 allow=1
+[262972] SU done uid=0 code=0
+[263008] SU shellcmd uid=10257 '|'
+[263011] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[263026] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[263028] SU decision uid=0 allow=1
+[263080] SU done uid=0 code=0
+[263114] SU shellcmd uid=10257 '|'
+[263117] SU shellcmd uid=10257 'su 10047 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263131] SU req uid=0 target=10047 cmd='keystore_cli_v2 list'
+[263133] SU decision uid=0 allow=1
+[263176] SU done uid=0 code=0
+[263204] SU shellcmd uid=10257 '|'
+[263206] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[263223] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[263224] SU decision uid=0 allow=1
+[263268] SU done uid=0 code=0
+[263301] SU shellcmd uid=10257 '|'
+[263304] SU shellcmd uid=10257 'su 2000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[263320] SU req uid=0 target=2000 cmd='keystore_cli_v2 list'
+[263322] SU decision uid=0 allow=1
+[263366] SU done uid=0 code=0
+[263406] SU shellcmd uid=10257 '|'
+[263409] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[263425] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[263426] SU decision uid=0 allow=1
+[263471] SU done uid=0 code=0
+[263508] SU shellcmd uid=10257 '|'
+[263510] SU shellcmd uid=10257 'su 10047 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263524] SU req uid=0 target=10047 cmd='keystore_cli_v2 list'
+[263526] SU decision uid=0 allow=1
+[263569] SU done uid=0 code=0
+[263624] SU shellcmd uid=10257 '|'
+[263627] SU shellcmd uid=10257 'su 10125 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263644] SU req uid=0 target=10125 cmd='keystore_cli_v2 list'
+[263646] SU decision uid=0 allow=1
+[263706] SU done uid=0 code=0
+[263731] SU shellcmd uid=10257 '|'
+[263734] SU shellcmd uid=10257 'su 10022 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263752] SU req uid=0 target=10022 cmd='keystore_cli_v2 list'
+[263754] SU decision uid=0 allow=1
+[263814] SU done uid=0 code=0
+[263853] SU shellcmd uid=10257 '|'
+[263855] SU shellcmd uid=10257 'su 10047 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263876] SU req uid=0 target=10047 cmd='keystore_cli_v2 list'
+[263878] SU decision uid=0 allow=1
+[263934] SU done uid=0 code=0
+[263964] SU shellcmd uid=10257 '|'
+[263966] SU shellcmd uid=10257 'su 10177 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[263983] SU req uid=0 target=10177 cmd='keystore_cli_v2 list'
+[263986] SU decision uid=0 allow=1
+[264043] SU done uid=0 code=0
+[264071] SU shellcmd uid=10257 '|'
+[264073] SU shellcmd uid=10257 'su 10185 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264091] SU req uid=0 target=10185 cmd='keystore_cli_v2 list'
+[264093] SU decision uid=0 allow=1
+[264148] SU done uid=0 code=0
+[264170] SU shellcmd uid=10257 '|'
+[264172] SU shellcmd uid=10257 'su 10216 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264188] SU req uid=0 target=10216 cmd='keystore_cli_v2 list'
+[264190] SU decision uid=0 allow=1
+[264239] SU done uid=0 code=0
+[264287] SU shellcmd uid=10257 '|'
+[264289] SU shellcmd uid=10257 'su 10196 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264306] SU req uid=0 target=10196 cmd='keystore_cli_v2 list'
+[264308] SU decision uid=0 allow=1
+[264360] SU done uid=0 code=0
+[264385] SU shellcmd uid=10257 '|'
+[264387] SU shellcmd uid=10257 'su 10219 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264403] SU req uid=0 target=10219 cmd='keystore_cli_v2 list'
+[264405] SU decision uid=0 allow=1
+[264450] SU done uid=0 code=0
+[264476] SU shellcmd uid=10257 '|'
+[264484] SU shellcmd uid=10257 'su 10135 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264499] SU req uid=0 target=10135 cmd='keystore_cli_v2 list'
+[264501] SU decision uid=0 allow=1
+[264548] SU done uid=0 code=0
+[264574] SU shellcmd uid=10257 '|'
+[264577] SU shellcmd uid=10257 'su 10199 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264592] SU req uid=0 target=10199 cmd='keystore_cli_v2 list'
+[264594] SU decision uid=0 allow=1
+[264647] SU done uid=0 code=0
+[264675] SU shellcmd uid=10257 '|'
+[264677] SU shellcmd uid=10257 'su 10024 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264693] SU req uid=0 target=10024 cmd='keystore_cli_v2 list'
+[264695] SU decision uid=0 allow=1
+[264745] SU done uid=0 code=0
+[264781] SU shellcmd uid=10257 '|'
+[264783] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[264798] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[264800] SU decision uid=0 allow=1
+[264849] SU done uid=0 code=0
+[264877] SU shellcmd uid=10257 '|'
+[264880] SU shellcmd uid=10257 'su 10075 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[264896] SU req uid=0 target=10075 cmd='keystore_cli_v2 list'
+[264898] SU decision uid=0 allow=1
+[264945] SU done uid=0 code=0
+[264981] SU shellcmd uid=10257 '|'
+[264983] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[265000] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[265002] SU decision uid=0 allow=1
+[265055] SU done uid=0 code=0
+[265095] SU shellcmd uid=10257 '|'
+[265098] SU shellcmd uid=10257 'su 10060 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265113] SU req uid=0 target=10060 cmd='keystore_cli_v2 list'
+[265115] SU decision uid=0 allow=1
+[265168] SU done uid=0 code=0
+[265206] SU shellcmd uid=10257 '|'
+[265209] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[265229] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[265231] SU decision uid=0 allow=1
+[265283] SU done uid=0 code=0
+[265305] SU shellcmd uid=10257 '|'
+[265310] SU shellcmd uid=10257 'su 10165 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265328] SU req uid=0 target=10165 cmd='keystore_cli_v2 list'
+[265331] SU decision uid=0 allow=1
+[265386] SU done uid=0 code=0
+[265411] SU shellcmd uid=10257 '|'
+[265414] SU shellcmd uid=10257 'su 10119 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265430] SU req uid=0 target=10119 cmd='keystore_cli_v2 list'
+[265432] SU decision uid=0 allow=1
+[265490] SU done uid=0 code=0
+[265517] SU shellcmd uid=10257 '|'
+[265519] SU shellcmd uid=10257 'su 10176 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265537] SU req uid=0 target=10176 cmd='keystore_cli_v2 list'
+[265539] SU decision uid=0 allow=1
+[265604] SU done uid=0 code=0
+[265665] SU shellcmd uid=10257 '|'
+[265668] SU shellcmd uid=10257 'su 10060 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265685] SU req uid=0 target=10060 cmd='keystore_cli_v2 list'
+[265688] SU decision uid=0 allow=1
+[265745] SU done uid=0 code=0
+[265778] SU shellcmd uid=10257 '|'
+[265781] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[265804] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[265806] SU decision uid=0 allow=1
+[265863] SU done uid=0 code=0
+[265887] SU shellcmd uid=10257 '|'
+[265890] SU shellcmd uid=10257 'su 10067 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[265905] SU req uid=0 target=10067 cmd='keystore_cli_v2 list'
+[265907] SU decision uid=0 allow=1
+[265956] SU done uid=0 code=0
+[265982] SU shellcmd uid=10257 '|'
+[265984] SU shellcmd uid=10257 'su 10223 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266000] SU req uid=0 target=10223 cmd='keystore_cli_v2 list'
+[266002] SU decision uid=0 allow=1
+[266051] SU done uid=0 code=0
+[266077] SU shellcmd uid=10257 '|'
+[266080] SU shellcmd uid=10257 'su 10173 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266096] SU req uid=0 target=10173 cmd='keystore_cli_v2 list'
+[266098] SU decision uid=0 allow=1
+[266155] SU done uid=0 code=0
+[266192] SU shellcmd uid=10257 '|'
+[266194] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[266211] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[266213] SU decision uid=0 allow=1
+[266269] SU done uid=0 code=0
+[266297] SU shellcmd uid=10257 '|'
+[266300] SU shellcmd uid=10257 'su 10049 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266317] SU req uid=0 target=10049 cmd='keystore_cli_v2 list'
+[266320] SU decision uid=0 allow=1
+[266381] SU done uid=0 code=0
+[266402] SU shellcmd uid=10257 '|'
+[266405] SU shellcmd uid=10257 'su 10095 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266424] SU req uid=0 target=10095 cmd='keystore_cli_v2 list'
+[266428] SU decision uid=0 allow=1
+[266452] SU prompt uid=10253 ans='always' allow=1
+[266454] SU decision uid=10253 allow=1
+[266458] SU shellcmd uid=10253 'echo SHELL_TEST|'
+[266473] SU shellcmd uid=10253 'id|'
+[266487] SU done uid=0 code=0
+[266500] SU shellcmd uid=10253 'cd '/'|'
+[266506] SU shellcmd uid=10253 '|'
+[266508] SU shellcmd uid=10253 '/data/app/~~mnNgfb28fXx5gX02bPJE7A==/moe.shizuku.privileged.api-WJiYfHNhMeKMOv2kJc7oNQ==/lib/arm64/libshizuku.so --apk=/data/app/~'
+[266513] SU shellcmd uid=10257 '|'
+[266515] SU shellcmd uid=10257 'su 10108 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266529] SU req uid=0 target=10108 cmd='keystore_cli_v2 list'
+[266531] SU decision uid=0 allow=1
+[266586] SU done uid=0 code=0
+[266603] SU shellcmd uid=10257 '|'
+[266606] SU shellcmd uid=10257 'su 10159 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266622] SU req uid=0 target=10159 cmd='keystore_cli_v2 list'
+[266625] SU decision uid=0 allow=1
+[266673] SU done uid=0 code=0
+[266699] SU shellcmd uid=10257 '|'
+[266701] SU shellcmd uid=10257 'su 10016 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266716] SU req uid=0 target=10016 cmd='keystore_cli_v2 list'
+[266719] SU decision uid=0 allow=1
+[266792] SU done uid=0 code=0
+[266825] SU shellcmd uid=10257 '|'
+[266827] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[266843] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[266845] SU decision uid=0 allow=1
+[266898] SU done uid=0 code=0
+[266918] SU shellcmd uid=10257 '|'
+[266921] SU shellcmd uid=10257 'su 10107 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[266935] SU req uid=0 target=10107 cmd='keystore_cli_v2 list'
+[266937] SU decision uid=0 allow=1
+[266989] SU done uid=0 code=0
+[267020] SU shellcmd uid=10257 '|'
+[267022] SU shellcmd uid=10257 'su 1002 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[267039] SU req uid=0 target=1002 cmd='keystore_cli_v2 list'
+[267041] SU decision uid=0 allow=1
+[267092] SU done uid=0 code=0
+[267111] SU shellcmd uid=10257 '|'
+[267113] SU shellcmd uid=10257 'su 10145 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267128] SU req uid=0 target=10145 cmd='keystore_cli_v2 list'
+[267130] SU decision uid=0 allow=1
+[267178] SU done uid=0 code=0
+[267196] SU shellcmd uid=10257 '|'
+[267198] SU shellcmd uid=10257 'su 10250 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267213] SU req uid=0 target=10250 cmd='keystore_cli_v2 list'
+[267215] SU decision uid=0 allow=1
+[267264] SU done uid=0 code=0
+[267289] SU shellcmd uid=10257 '|'
+[267291] SU shellcmd uid=10257 'su 5004 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[267305] SU req uid=0 target=5004 cmd='keystore_cli_v2 list'
+[267307] SU decision uid=0 allow=1
+[267355] SU done uid=0 code=0
+[267376] SU shellcmd uid=10257 '|'
+[267378] SU shellcmd uid=10257 'su 10082 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267395] SU req uid=0 target=10082 cmd='keystore_cli_v2 list'
+[267398] SU decision uid=0 allow=1
+[267457] SU done uid=0 code=0
+[267486] SU shellcmd uid=10257 '|'
+[267498] SU shellcmd uid=10257 'su 10116 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267518] SU req uid=0 target=10116 cmd='keystore_cli_v2 list'
+[267520] SU decision uid=0 allow=1
+[267579] SU done uid=0 code=0
+[267617] SU shellcmd uid=10257 '|'
+[267620] SU shellcmd uid=10257 'su 1001 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[267638] SU req uid=0 target=1001 cmd='keystore_cli_v2 list'
+[267640] SU decision uid=0 allow=1
+[267697] SU done uid=0 code=0
+[267723] SU shellcmd uid=10257 '|'
+[267726] SU shellcmd uid=10257 'su 10086 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267745] SU req uid=0 target=10086 cmd='keystore_cli_v2 list'
+[267748] SU decision uid=0 allow=1
+[267807] SU done uid=0 code=0
+[267841] SU shellcmd uid=10257 '|'
+[267843] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;'
+[267862] SU req uid=0 target=1000 cmd='keystore_cli_v2 list'
+[267864] SU decision uid=0 allow=1
+[267919] SU done uid=0 code=0
+[267950] SU shellcmd uid=10257 '|'
+[267953] SU shellcmd uid=10257 'su 10012 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[267969] SU req uid=0 target=10012 cmd='keystore_cli_v2 list'
+[267972] SU decision uid=0 allow=1
+[268026] SU done uid=0 code=0
+[268051] SU shellcmd uid=10257 '|'
+[268053] SU shellcmd uid=10257 'su 10085 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[268071] SU req uid=0 target=10085 cmd='keystore_cli_v2 list'
+[268073] SU decision uid=0 allow=1
+[268135] SU done uid=0 code=0
+[268158] SU shellcmd uid=10257 '|'
+[268160] SU shellcmd uid=10257 'su 10069 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+[268178] SU req uid=0 target=10069 cmd='keystore_cli_v2 list'
+[268181] SU decision uid=0 allow=1
+[268239] SU done uid=0 code=0
+[268262] SU shellcmd uid=10257 '|su 10181 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&'
+[268281] SU req uid=0 target=10181 cmd='keystore_cli_v2 list'
+[268284] SU decision uid=0 allow=1
+[268342] SU done uid=0 code=0
+[271651] SU done uid=10253 code=128
+[283180] SU req uid=2000 target=0 cmd='grep ^Uid /proc/10802/status'
+[283182] SU decision uid=2000 allow=1
+[283226] SU done uid=2000 code=0
+[283639] SU req uid=10254 target=0 cmd='id; echo ---; su -v; ksud --version; magisk -v'
+[283641] SU decision uid=10254 allow=1
+[283734] SU done uid=10254 code=0
+[283800] SU req uid=10254 target=0 cmd='ksud module list 2>&1'
+[283805] SU decision uid=10254 allow=1
+[284454] SU done uid=10254 code=0
+[294546] SU req uid=2000 target=0 cmd='cat /proc/11151/root/system/etc/a12mod_test.txt'
+[294548] SU decision uid=2000 allow=1
+[294587] SU done uid=2000 code=0

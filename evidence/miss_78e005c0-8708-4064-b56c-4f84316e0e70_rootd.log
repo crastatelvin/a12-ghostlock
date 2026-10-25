@@ -1,0 +1,22 @@
+[82322] CAPS pid=4755 uid=2000 euid=2000 perm=0 slot0=0 V=ffffff8009ea09b2
+[82323] T tid=4759 nice19 ret=0 errno=0
+[82323] W tid=4760 lock-chain ret=0 errno=0
+[82325] O0 tid=4761 lock-target ret=0 errno=0
+[82477] SETUP chain w=1 o_t=1 t=1 o_c=1 w_w=1
+[82628] SETUP requeue ret=-1 errno=35
+[84476] W wait ret=-1 errno=110 (dangle expected)
+[84478] SETUP dangle ready w_wait_ret=-1 errno=110
+[84481] REQ[1] perm        A=ffffff800a18ea40 val=0000000000000000 slot=ffffff8009e78350 pc=ffffff800a18ea38 fp=ffffff8009e78350
+[84482] perm now=1
+[84485] REQ[2] reinit      A=ffffff8009e78438 val=ffffff800a18ea43 slot=ffffff8009e78370 pc=ffffff8009e78430 fp=ffffff8009e78370
+[84486] self context='u:r:shell:s0'
+[84487] after reinit perm=1 ctx=13
+[84489] BEACON pid=4914 try=0
+[84493] REQ[3] c-tail      A=ffffff8009e88328 val=ffffff8009e6bce0 slot=ffffff8009e78390 pc=ffffff8009e88320 fp=ffffff8009e78390
+[84496] REQ[4] c-cand      A=ffffff8009e88328 val=ffffffc105bf2448 slot=ffffff8009e783b0 pc=ffffff8009e88320 fp=ffffff8009e783b0
+[84498] CAND n=32 hex=2083e80980ffffff40d5acc7c0ffffff40d5acc7c0ffffff613132726f6f740a
+[84499] CAND try=0 cred=ffffffc0c7acd540 comm='a12root' n=32
+[84500] MATCH beacon cred=ffffffc0c7acd540
+[84503] REQ[5] cred_secbits A=ffffffc0c7acd560 val=0000000000000000 slot=ffffff8009e783d0 pc=ffffffc0c7acd558 fp=ffffff8009e783d0
+[84506] REQ[6] cred_prm    A=ffffffc0c7acd570 val=ffffff8009ea09b2 slot=ffffff8009e783f0 pc=ffffffc0c7acd568 fp=ffffff8009e783f0
+

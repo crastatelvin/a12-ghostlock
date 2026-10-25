@@ -1,0 +1,150 @@
+#!/system/bin/sh
+# resetprop - Magisk-compatible property tool for the A12 userspace root.
+#
+# Honest limits: Android's property service treats ro.* as write-once, so a
+# ro.* property cannot be changed after init.  Everything else is set through
+# setprop; -p additionally writes /data/property/<name> so it survives reboot.
+# -n (no trigger) is accepted for compatibility: this device has no init hook
+# to trigger anyway.
+
+RP_VERBOSE=0
+RP_PERSIST=0
+RP_WAIT=0
+RP_WAIT_NAME=
+RP_DELETE=0
+RP_NAME=
+RP_FILE=
+
+rp_usage() {
+  cat <<EOF
+resetprop - Magisk-compatible property tool (A12)
+
+Usage: resetprop [options] [name [value]]
+
+Options:
+  -h, --help            show this help message and exit
+  -v, --verbose         print what is being done
+  -n, --no-trigger      accepted (no init trigger support)
+  -p, --persist         also write /data/property/<name>
+  -w, --wait NAME       wait until NAME has a non-empty value (30s)
+  -d, --delete NAME     delete NAME (best effort: clears the value)
+  -f, --file FILE       load name=value pairs from FILE
+EOF
+}
+
+rp_die() { echo "resetprop: $*" >&2; exit 1; }
+
+rp_valid_name() {
+  case "$1" in
+    ''|*[!A-Za-z0-9._@:-]*) return 1 ;;
+  esac
+  return 0
+}
+
+rp_set() {
+  rp_n=$1
+  rp_v=$2
+  rp_valid_name "$rp_n" || { echo "resetprop: invalid property name '$rp_n'" >&2; return 1; }
+  [ "$RP_VERBOSE" = 1 ] && echo "resetprop: set $rp_n=$rp_v"
+  rp_e=$(setprop "$rp_n" "$rp_v" 2>&1)
+  rp_rc=$?
+  if [ $rp_rc -ne 0 ]; then
+    [ -n "$rp_e" ] && echo "resetprop: $rp_e" >&2
+    echo "resetprop: $rp_n rejected (ro.* is write-once; unknown namespaces are not in property_contexts)" >&2
+    return $rp_rc
+  fi
+  if [ "$RP_PERSIST" = 1 ]; then
+    mkdir -p /data/property 2>/dev/null
+    printf '%s' "$rp_v" > "/data/property/$rp_n" 2>/dev/null
+    chmod 600 "/data/property/$rp_n" 2>/dev/null
+  fi
+  return 0
+}
+
+rp_del() {
+  rp_n=$1
+  rp_valid_name "$rp_n" || { echo "resetprop: invalid property name '$rp_n'" >&2; return 1; }
+  [ "$RP_VERBOSE" = 1 ] && echo "resetprop: delete $rp_n"
+  # Android has no userspace delete; an empty value is the closest equivalent.
+  setprop "$rp_n" "" 2>/dev/null
+  rm -f "/data/property/$rp_n" 2>/dev/null
+  return 0
+}
+
+rp_load_file() {
+  rp_f=$1
+  [ -f "$rp_f" ] || { echo "resetprop: no such file: $rp_f" >&2; return 1; }
+  rp_fail=0
+  while IFS= read -r rp_line || [ -n "$rp_line" ]; do
+    rp_line=$(printf '%s' "$rp_line" | tr -d '\r')
+    case "$rp_line" in
+      ''|'#'*) continue ;;
+    esac
+    case "$rp_line" in
+      *=*) ;;
+      *) continue ;;
+    esac
+    rp_k=${rp_line%%=*}
+    rp_val=${rp_line#*=}
+    # trim leading spaces around the key only; values are kept verbatim
+    rp_k=$(printf '%s' "$rp_k" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+    rp_set "$rp_k" "$rp_val" || rp_fail=1
+  done < "$rp_f"
+  return $rp_fail
+}
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -h|--help) rp_usage; exit 0 ;;
+    -v|--verbose) RP_VERBOSE=1; shift ;;
+    -n|--no-trigger) shift ;;
+    -p|--persist) RP_PERSIST=1; shift ;;
+    -w|--wait) RP_WAIT=1; RP_WAIT_NAME=$2; shift 2 ;;
+    --wait=*) RP_WAIT=1; RP_WAIT_NAME=${1#*=}; shift ;;
+    -d|--delete) RP_DELETE=1; RP_NAME=$2; shift 2 ;;
+    --delete=*) RP_DELETE=1; RP_NAME=${1#*=}; shift ;;
+    -f|--file) RP_FILE=$2; shift 2 ;;
+    --file=*) RP_FILE=${1#*=}; shift ;;
+    --) shift; break ;;
+    -*) rp_die "unknown option '$1' (try --help)" ;;
+    *) break ;;
+  esac
+done
+
+if [ "$RP_WAIT" = 1 ]; then
+  [ -n "$RP_WAIT_NAME" ] || rp_die "--wait needs a property name"
+  rp_i=0
+  while [ $rp_i -lt 150 ]; do
+    rp_v=$(getprop "$RP_WAIT_NAME" 2>/dev/null)
+    if [ -n "$rp_v" ]; then printf '%s\n' "$rp_v"; exit 0; fi
+    sleep 0.2 2>/dev/null || sleep 1
+    rp_i=$((rp_i + 1))
+  done
+  exit 1
+fi
+
+if [ -n "$RP_FILE" ]; then
+  rp_load_file "$RP_FILE"
+  exit $?
+fi
+
+if [ "$RP_DELETE" = 1 ]; then
+  [ -n "$RP_NAME" ] || rp_die "--delete needs a property name"
+  rp_del "$RP_NAME"
+  exit $?
+fi
+
+case $# in
+  0)
+    getprop
+    exit 0
+    ;;
+  1)
+    getprop "$1"
+    exit 0
+    ;;
+  *)
+    rp_set "$1" "$2"
+    exit $?
+    ;;
+esac

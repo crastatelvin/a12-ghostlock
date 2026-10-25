@@ -1,0 +1,128 @@
+#!/system/bin/sh
+# magisk - Magisk-compatible CLI shim for the A12 userspace root.
+#
+# The real Magisk daemon does not exist here: modules are applied by
+# a12mod.sh, and root is served by the a12 su daemon.  This shim exists so
+# apps and module scripts that probe for Magisk get a coherent answer and a
+# working module interface.
+
+A12_BIN=/data/adb/ksu/bin
+# /data/adb/ksu is 0700 root, so fall back to the world-readable copy for
+# non-root callers (magisk -v/--path then work for any uid).
+if [ -r "$A12_BIN/a12mod.sh" ]; then
+  . "$A12_BIN/a12mod.sh"
+else
+  . /system_ext/bin/a12mod.sh
+fi
+
+MAGISK_VER=25.2
+MAGISK_VER_CODE=25200
+
+mg_need_root() {
+  if [ "$(id -u)" != "0" ]; then
+    echo "magisk: this command needs root (run it through su)" >&2
+    exit 1
+  fi
+}
+
+mg_usage() {
+  cat <<EOF
+Magisk (A12 userspace compatibility layer) $MAGISK_VER
+
+Usage: magisk [applet [arguments]...]
+   or: magisk [options] [arguments...]
+
+Options:
+  -c                        print current binary version
+  -v, --version             print running version
+  -V, --versionCode         print running version code
+  --path                    print the directory holding the binaries
+  --list                    list available applets
+  --list-modules            list installed module ids
+  --install-module ZIP      install a module zip (hot)
+  --remove-module ID        uninstall a module
+  --post-fs-data            run post-fs-data scripts
+  --service                 run service scripts
+  --boot-completed          run boot-completed scripts
+  -h, --help                show this help
+
+Applets: su, resetprop
+EOF
+}
+
+case "$1" in
+  -c|-v|--version)
+    echo "$MAGISK_VER:MAGISK"
+    ;;
+  -V|--versionCode)
+    echo "$MAGISK_VER_CODE"
+    ;;
+  --path)
+    echo "$A12_BIN"
+    ;;
+  --list)
+    echo "su resetprop ksud a12mod"
+    ;;
+  --list-modules)
+    mg_need_root
+    a12_ensure
+    for mg_m in "$MODS"/*; do
+      [ -f "$mg_m/module.prop" ] || continue
+      echo "${mg_m##*/}"
+    done
+    ;;
+  --install-module)
+    mg_need_root
+    a12_install "$2"
+    ;;
+  --remove-module)
+    mg_need_root
+    a12_uninstall "$2"
+    ;;
+  --remove-modules)
+    mg_need_root
+    for mg_m in "$MODS"/*; do
+      [ -d "$mg_m" ] || continue
+      a12_uninstall "${mg_m##*/}"
+    done
+    ;;
+  --post-fs-data)
+    mg_need_root
+    a12_stage post-fs-data
+    ;;
+  --service)
+    mg_need_root
+    a12_stage service
+    ;;
+  --boot-completed)
+    mg_need_root
+    a12_stage boot-completed
+    ;;
+  --daemon|--stop)
+    echo "magisk: root is served by the a12 daemon; no separate Magisk daemon"
+    ;;
+  --sqlite)
+    echo "magisk: --sqlite is unavailable (no Magisk database)" >&2
+    exit 1
+    ;;
+  --denylist)
+    echo "magisk: denylist/Zygisk is unavailable (no kernel driver)" >&2
+    exit 1
+    ;;
+  su)
+    shift
+    exec /system_ext/bin/su "$@"
+    ;;
+  resetprop)
+    shift
+    exec "$A12_BIN/resetprop" "$@"
+    ;;
+  -h|--help|"")
+    mg_usage
+    ;;
+  *)
+    echo "magisk: unknown command '$1'" >&2
+    mg_usage >&2
+    exit 1
+    ;;
+esac

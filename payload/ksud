@@ -1,0 +1,164 @@
+#!/system/bin/sh
+# ksud - KernelSU-compatible userspace CLI for the A12 root.
+#
+# This is a userspace emulation: there is no KernelSU kernel driver, so
+# kernel-only commands (boot-patch, late-load of a .ko, insmod, feature
+# toggles) report that they are unsupported instead of pretending.
+
+A12_BIN=/data/adb/ksu/bin
+# /data/adb/ksu is 0700 root (KernelSU layout), so a non-root caller cannot
+# read the engine there.  /system_ext/bin has a world-readable copy, so source
+# whichever works: --version/--help then answer for any uid, while commands
+# that write /data/adb still fail unless run through su.
+if [ -r "$A12_BIN/a12mod.sh" ]; then
+  . "$A12_BIN/a12mod.sh"
+else
+  . /system_ext/bin/a12mod.sh
+fi
+
+a12_need_root() {
+  if [ "$(id -u)" != "0" ]; then
+    a12_err "ksud: this command needs root (run it through su)"
+    exit 1
+  fi
+}
+
+a12_usage() {
+  cat <<EOF
+KernelSU (A12 userspace emulation) v3.3.1
+
+Usage: ksud <command> [args]
+
+Commands:
+  module install <zip>            install a module and apply it now
+  module list                     list installed modules (JSON)
+  module enable|disable <id>      toggle a module
+  module uninstall <id>           uninstall a module
+  module undo-uninstall <id>      cancel a pending uninstall
+  module action <id>              run the module's action.sh
+  module mount                    (re)apply module overlays
+  module unmount                  detach module overlays
+  module config get|set|list|delete|clear ...
+  post-fs-data                    run post-fs-data scripts
+  services                        run service scripts
+  boot-completed                  run boot-completed scripts
+  late-load                       full userspace bring-up (mount + scripts)
+  su [args]                       start a root shell
+  resetprop [args]                Magisk-compatible property tool
+  sepolicy check|apply|patch      no-op (SELinux is permissive)
+  feature check|list              report emulated feature support
+  initrc refresh                  not available (no init hook)
+  debug info|version|package      diagnostics
+EOF
+}
+
+a12_version() { echo "$KSU_VER (uapi: $KSU_UAPI_VER)"; }
+
+a12_cmd_module() {
+  a12_sub=$1; shift
+  case "$a12_sub" in
+    install)   a12_need_root; a12_install "$1" ;;
+    list)      a12_list ;;
+    enable)    a12_need_root; a12_enable "$1" ;;
+    disable)   a12_need_root; a12_disable "$1" ;;
+    uninstall) a12_need_root; a12_uninstall "$1" ;;
+    undo-uninstall) a12_need_root; a12_undo_uninstall "$1" ;;
+    action)    a12_need_root; a12_action "$1" ;;
+    mount)     a12_need_root; a12_mount ;;
+    unmount)   a12_need_root; a12_unmount ;;
+    config)
+      a12_csub=$1; shift
+      a12_cid=$KSU_MODULE
+      case "$1" in
+        --internal) shift; a12_cid="internal.$1"; shift ;;
+      esac
+      if [ -z "$a12_cid" ]; then
+        a12_err "ksud: run inside a module or pass --internal <name>"
+        exit 1
+      fi
+      case "$a12_csub" in
+        get)    a12_cfg_get "$a12_cid" "$1" ;;
+        set)    a12_cfg_set "$a12_cid" "$1" "$2" "$3" ;;
+        list)   a12_cfg_list "$a12_cid" ;;
+        delete) a12_cfg_del "$a12_cid" "$1" "$2" ;;
+        clear)  a12_cfg_clear "$a12_cid" "$1" ;;
+        *) a12_err "ksud: module config get|set|list|delete|clear"; exit 1 ;;
+      esac
+      ;;
+    ""|-h|--help) a12_usage ;;
+    *) a12_err "ksud: unknown module command '$a12_sub'"; exit 1 ;;
+  esac
+}
+
+a12_cmd_feature() {
+  a12_sub=$1
+  case "$a12_sub" in
+    check)
+      case "$2" in
+        su_compat) echo "supported" ;;
+        *) echo "unsupported" ;;
+      esac
+      ;;
+    get)
+      case "$2" in
+        su_compat) echo "1" ;;
+        *) echo "0" ;;
+      esac
+      ;;
+    list)
+      echo "su_compat: supported"
+      echo "kernel_umount: unsupported"
+      echo "sulog: unsupported"
+      echo "adb_root: unsupported"
+      echo "selinux_hide: unsupported"
+      echo "shell_su_adb_only: unsupported"
+      ;;
+    set) a12_err "ksud: features are emulated and read-only"; exit 1 ;;
+    *) a12_err "ksud: feature check|get|list"; exit 1 ;;
+  esac
+}
+
+a12_cmd_debug() {
+  a12_sub=$1; shift
+  case "$a12_sub" in
+    info)
+      echo "version: $KSU_VER_CODE"
+      echo "flags: 0x4"
+      echo "uapi_version: $KSU_UAPI_VER"
+      echo "features: 0x1"
+      echo "lkm: false"
+      echo "bundled: true"
+      echo "late_load: true"
+      echo "runtime_mode: late-load"
+      echo "pr_build: false"
+      ;;
+    version) echo "Kernel Version: $KSU_VER_CODE" ;;
+    package) echo "com.a12root.suapp" ;;
+    su) shift 2>/dev/null; exec /system_ext/bin/su "$@" ;;
+    *) a12_err "ksud: debug info|version|package|su"; exit 1 ;;
+  esac
+}
+
+case "$1" in
+  module) shift; a12_need_root; a12_cmd_module "$@" ;;
+  post-fs-data) a12_need_root; a12_stage post-fs-data ;;
+  services) a12_need_root; a12_stage service ;;
+  boot-completed) a12_need_root; a12_stage boot-completed ;;
+  late-load) a12_need_root; a12_late_load ;;
+  su) shift; exec /system_ext/bin/su "$@" ;;
+  resetprop) shift; a12_need_root; exec "$A12_BIN/resetprop" "$@" ;;
+  sepolicy)
+    shift
+    a12_need_root
+    case "$1" in
+      check|apply|patch) exit 0 ;;
+      *) a12_err "ksud: sepolicy check|apply|patch"; exit 1 ;;
+    esac
+    ;;
+  feature) shift; a12_cmd_feature "$@" ;;
+  initrc) echo "ksud: initrc injection is unavailable without the KernelSU kernel driver" ;;
+  debug) shift; a12_cmd_debug "$@" ;;
+  -V|--version) a12_version ;;
+  -h|--help|"") a12_usage ;;
+  *) a12_err "ksud: unknown command '$1'"; a12_usage; exit 1 ;;
+esac

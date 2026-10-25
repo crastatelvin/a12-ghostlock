@@ -1,0 +1,163 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20261025123748
+Username: WHITE-DEVIL\WHITE-DEVIL
+RunAs User: WHITE-DEVIL\WHITE-DEVIL
+Configuration Name: 
+Machine: WHITE-DEVIL (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE -NoLogo -NoProfile -NonInteractive -Command cd "<package>"; .\root.ps1 2>&1 | Tee-Object -FilePath "<work>\oneshot_run12.log"
+Process ID: 11648
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+=== A12 one-shot root (CVE-2026-43499) ===
+Payload: kernel uid 0 + forged caps + su daemon + grant dialog + root apps
+Device: SM-A125F / 12
+
+[attempt 1/5] fresh boot (one exploit run per boot)
+adb.exe : adb.exe: no devices/emulators found
+At <package>\root.ps1:248 char:24
++ ...        $bc = (& $adb shell getprop sys.boot_completed 2>$null | Out-S ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (adb.exe: no devices/emulators found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+adb.exe : adb.exe: no devices/emulators found
+At <package>\root.ps1:248 char:24
++ ...        $bc = (& $adb shell getprop sys.boot_completed 2>$null | Out-S ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (adb.exe: no devices/emulators found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+adb.exe : adb.exe: no devices/emulators found
+At <package>\root.ps1:248 char:24
++ ...        $bc = (& $adb shell getprop sys.boot_completed 2>$null | Out-S ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (adb.exe: no devices/emulators found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+adb.exe : adb.exe: no devices/emulators found
+At <package>\root.ps1:248 char:24
++ ...        $bc = (& $adb shell getprop sys.boot_completed 2>$null | Out-S ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (adb.exe: no devices/emulators found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+  boot_id: d7c937ec-49e6-4f38-ba2c-a760c05cb262
+  pushing payload
+  running exploit (rootd)
+  --- KernelSU compatibility ---
+v3.3.1:KernelSU
+33001
+v3.3.1 (uapi: 2)
+25.2:MAGISK
+25200
+  su 2000 -c id -u -> 2000
+  resetprop round-trip -> hello
+  --- module install (hot) ---
+*******************************
+ A12 Module Test
+ by A12
+*******************************
+*******************************
+ Powered by KernelSU (A12)
+*******************************
+
+- Installing to /data/adb/modules_update/a12mod_test
+- Extracting module files
+- Running module installer
+- Module size: 31K
+- Mounting modules
+- Done
+- Module installed successfully!
+[
+  {
+    "id": "a12mod_test",
+    "name": "A12 Module Test",
+    "version": "v1.0",
+    "versionCode": "1",
+    "author": "A12",
+    "description": "Overlay + script test module",
+    "enabled": "true",
+    "update": "false",
+    "remove": "false",
+    "web": "false",
+    "action": "true",
+    "mount": "true"
+  }
+]
+  overlay file -> hello from a12 module overlay
+  service.sh -> service ran | KSU=true KSU_MODULE=a12mod_test KSU_VER=v3.3.1
+
+  --- kernel proof (rootproof.txt) ---
+uid=0 euid=0 gid=2000 egid=2000 CapEff=ffffff8009ea09b2
+  --- id_caps.out ---
+0
+uid=0(root) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid) context=u:r:shell:s0
+Uid:	0	0	0	0
+Gid:	2000	2000	2000	2000
+  --- /system_ext/bin/su -c id (from adb shell) ---
+uid=0(root) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid) context=u:r:shell:s0
+  --- su daemon selftest (uid 2000) ---
+uid=0(root) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid) context=u:r:shell:s0
+0
+  --- interactive shell selftest ---
+[84956] SU shell test OK status=0 out='SHELL_TEST
+
+[apps] installing manager + root apps
+  payload\SuApp.apk -> Success
+  payload\apps\NeoBackup.apk -> Success
+  payload\apps\AppManager.apk -> Success
+  payload\apps\Shizuku.apk -> Success
+
+[app] neobackup (com.machiav3lli.backup)
+  uid=10259
+  PROMPT VISIBLE
+  tapped grant: True
+  decision: [119278] SU decision uid=10259 allow=0
+[149492] SU decision uid=10259 allow=0
+[156801] SU decision uid=10259 allow=1
+  shell cmds: [157464] SU shellcmd uid=10259 '|' ; [157467] SU shellcmd uid=10259 '"toybox" ls -ld /|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc;echo 3aff97dd-01e2-423b-980d-61e1f4b41ccc >&2;echo $__RET;uns' ; [157701] SU shellcmd uid=10259 '|' ; [157703] SU shellcmd uid=10259 'sh '/data/user/0/com.machiav3lli.backup/files/assets/plugin/checkroot.internal_sh'|__RET=$?;echo 3aff97dd-01e2-423b-980d-61e1f4b41'
+  done (only on shell close):
+  still shows 'ROOT missing': False
+  app ran root commands successfully: True
+
+[app] appmanager (io.github.muntashirakon.AppManager)
+  uid=10257
+  PROMPT VISIBLE
+  tapped grant: True
+  decision: [227230] SU decision uid=10257 allow=1
+  shell cmds: [251924] SU shellcmd uid=10257 '|' ; [251926] SU shellcmd uid=10257 'su 1000 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2;' ; [252027] SU shellcmd uid=10257 '|' ; [252029] SU shellcmd uid=10257 'su 10019 -c keystore_cli_v2 list |__RET=$?;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1;echo 16e17a95-5705-4971-bf1e-0dc138e00bd1 >&2'
+  done (only on shell close):
+  still shows 'Root access is not available': False
+  app ran root commands successfully: True
+
+[app] Shizuku (moe.shizuku.privileged.api)
+  uid=10253
+  tapped Start (rooted): True
+  PROMPT VISIBLE
+  tapped grant: True
+  shizuku_server pid: 10802
+  running: True  root mode: True
+  server cred: Uid:	0	0	0	0
+  Shizuku rooted and running: True
+
+[app] A12 su manager
+  manager shows uid=0: True
+  app process sees module overlay: hello from a12 module overlay
+
+--- grant policy ---
+10259 allow
+10257 allow
+10253 allow
+
+KernelSU compatibility: version=True modules=True target-uid=True resetprop=True app-overlay=True
+PASS: kernel root, su on PATH, grant dialog shown, Neo Backup / App Manager / Shizuku granted root,
+      KernelSU-compatible CLI (ksud/magisk/su) and hot module install verified
+Evidence: <package>\evidence
+**********************
+Windows PowerShell transcript end
+End time: 20261025124258
+**********************
